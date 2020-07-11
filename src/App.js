@@ -1,11 +1,12 @@
 import React from 'react';
 import FooterMenu from './components/FooterMenu';
+import Header from './components/Header';
 import Preview from './components/Preview';
 
 function App() {
   return (
     <div className='App'>
-      <h1>Boomi Factory</h1>
+      <Header />
       <Preview />
       <FooterMenu />
     </div>
