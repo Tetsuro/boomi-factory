@@ -1,6 +1,9 @@
 @import '../../stylesheets/media-queries';
 
 .Preview {
+  height: 100%;
+  overflow-y: scroll;
+
   // TODO: Temporary styles for the placeholder.
   // Update with actual SVG styles.
   img {

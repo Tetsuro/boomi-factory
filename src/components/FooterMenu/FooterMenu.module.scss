@@ -4,4 +4,24 @@
   border-top: 1px solid #ddd;
   height: rem(60);
   background: #ddd;
+  flex-shrink: 0;
+}
+
+.FooterList {
+  display: flex;
+  list-style: none;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: block;
+    width: 100%;
+  }
+
+  button {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+  }
 }

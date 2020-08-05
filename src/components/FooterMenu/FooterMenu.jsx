@@ -4,7 +4,7 @@ import styles from "./FooterMenu.module.scss";
 function FooterMenu() {
   return (
     <nav className={styles.FooterMenu}>
-      {/* <ul>
+      <ul className={styles.FooterList}>
         <li>
           <button>Select colours</button>
         </li>
@@ -12,9 +12,9 @@ function FooterMenu() {
           <button>Select eyes</button>
         </li>
         <li>
-          <button>Print</button>
+          <button>Print Boomi</button>
         </li>
-      </ul> */}
+      </ul>
     </nav>
   );
 }
