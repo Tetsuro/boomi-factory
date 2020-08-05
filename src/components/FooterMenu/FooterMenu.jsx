@@ -1,11 +1,10 @@
-import React from 'react';
-import styles from './FooterMenu.module.scss';
+import React from "react";
+import styles from "./FooterMenu.module.scss";
 
 function FooterMenu() {
-  console.log(styles);
   return (
     <nav className={styles.FooterMenu}>
-      <ul>
+      {/* <ul>
         <li>
           <button>Select colours</button>
         </li>
@@ -15,7 +14,7 @@ function FooterMenu() {
         <li>
           <button>Print</button>
         </li>
-      </ul>
+      </ul> */}
     </nav>
   );
 }

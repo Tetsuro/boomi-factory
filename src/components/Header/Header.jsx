@@ -1,25 +1,26 @@
-import React from 'react';
-import styles from './Header.module.scss';
+import React, { useState } from "react";
+import styles from "./Header.module.scss";
+import HamburgerMenu from "../HamburgerMenu";
+
+import { ReactComponent as HamburgerActivatorIcon } from "./icons/menu.svg";
 
 function Header() {
+  const [open, setOpen] = useState(false);
+
+  function handleClick() {
+    setOpen(open ? false : true);
+  }
+
   return (
-    <div className={styles.Preview}>
+    <div className={styles.Header}>
       <h1>Boomi Factory</h1>
-      <button>Menu</button>
-      <ul>
-        <li>
-          <a href='#'>What's a Boomi?</a>
-        </li>
-        <li>
-          <a href='#'>Build a Boomi</a>
-        </li>
-        <li>
-          <a href='#'>Gallery</a>
-        </li>
-        <li>
-          <a href='#'>Donate</a>
-        </li>
-      </ul>
+
+      <button className={styles.HamburgerActivator} onClick={handleClick}>
+        <HamburgerActivatorIcon />
+        <span>Open menu</span>
+      </button>
+
+      <HamburgerMenu open={open} />
     </div>
   );
 }

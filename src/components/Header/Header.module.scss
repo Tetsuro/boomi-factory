@@ -1,9 +1,22 @@
-@import '../../stylesheets/media-queries';
+@import '../../stylesheets/main';
 
-.Preview {
-  // TODO: Temporary styles for the placeholder.
-  // Update with actual SVG styles.
-  img {
-    max-width: 100%;
+.Header {
+  position: relative;
+  background: red; // TODO: Change this
+  height: rem(60);
+
+  h1 {
+    margin: 0;
+  }
+}
+
+.HamburgerActivator {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: get-spacing('half');
+
+  span {
+    @include visually-hidden;
   }
 }

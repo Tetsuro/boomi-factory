@@ -1,0 +1,26 @@
+@function rem($pixelValue) {
+  @return $pixelValue / 16+rem;
+}
+
+@function get-radius() {
+  @return 5px;
+}
+
+$spacings: ('normal': rem(20),
+  'half': rem(10),
+  'quarter': rem(5),
+  'double': rem(40),
+  'quad': rem(80),
+);
+
+@function get-spacing($spacing: 'normal') {
+  @return map-get($spacings, $spacing);
+}
+
+@mixin visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
