@@ -1,0 +1,28 @@
+@import '../../stylesheets/main';
+
+.Header {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: rem(60);
+  flex-shrink: 0;
+  border-bottom: 1px solid #ddd;
+
+  h1 {
+    margin: 0;
+    font-size: rem(16);
+  }
+}
+
+.HamburgerActivator {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: get-spacing('half');
+  background: none;
+  border: none;
+
+  span {
+    @include visually-hidden;
+  }
+}

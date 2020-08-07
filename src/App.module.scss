@@ -1,0 +1,16 @@
+@import './stylesheets/main';
+
+// body > div is to select the #root div.
+html,
+body,
+body>div {
+  height: 100%;
+
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
