@@ -1,16 +1,21 @@
 @import '../../stylesheets/main';
 
+$hamburger-size: rem(60);
+
 .Header {
   display: flex;
   align-items: center;
   position: relative;
   height: rem(60);
   flex-shrink: 0;
-  border-bottom: 1px solid #ddd;
-
+  justify-content: center;
+  
   h1 {
     margin: 0;
-    font-size: rem(16);
+    font-family: 'Londrina Solid', cursive;
+    font-size: rem(36);
+    // TODO: Use color helper
+    color: #1e96fc;
   }
 }
 
@@ -21,6 +26,9 @@
   padding: get-spacing('half');
   background: none;
   border: none;
+  height: $hamburger-size;
+  width: $hamburger-size;
+  cursor: pointer;
 
   span {
     @include visually-hidden;

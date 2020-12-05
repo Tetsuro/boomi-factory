@@ -1,12 +1,15 @@
-@import '../../stylesheets/media-queries';
+@import '../../stylesheets/main';
 
 .Preview {
   height: 100%;
-  overflow-y: scroll;
+  overflow-y: hidden;
+  padding: get-spacing();
+  // Used to visually centre Boomi because of his antenna on the left.
+  margin-left: -#{get-spacing('double')};
 
-  // TODO: Temporary styles for the placeholder.
-  // Update with actual SVG styles.
-  img {
-    max-width: 100%;
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
   }
 }

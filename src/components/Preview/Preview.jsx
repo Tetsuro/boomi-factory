@@ -1,12 +1,11 @@
 import React from 'react';
-import placeholder from './svg/placeholder-preview.png';
 import styles from './Preview.module.scss';
+import {ReactComponent as Boomi} from './svg/boomi.svg';
 
 function Preview() {
   return (
     <div className={styles.Preview}>
-      {/* Placeholder image */}
-      <img src={placeholder} />
+      <Boomi />
     </div>
   );
 }
