@@ -1,12 +1,12 @@
 @import '../../stylesheets/main';
 
-$hamburger-size: rem(60);
+$hamburger-size: rem(80);
 
 .Header {
   display: flex;
   align-items: center;
   position: relative;
-  height: rem(60);
+  height: $hamburger-size;
   flex-shrink: 0;
   justify-content: center;
   
@@ -32,5 +32,10 @@ $hamburger-size: rem(60);
 
   span {
     @include visually-hidden;
+  }
+
+  svg {
+    width: rem(30);
+    height: rem(30);
   }
 }
