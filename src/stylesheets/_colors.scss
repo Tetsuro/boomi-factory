@@ -1,1 +1,14 @@
-$red: #ff0000;
+$colors: (
+  'white': #fff,
+  'black': #000,
+  'pastel-yellow': #fcf6bd,
+  'pastel-pink': #ff99c8,
+  'pastel-green': #d0f4de,
+  'pastel-blue': #a9def9,
+  'pastel-purple': #e4c1f9,
+  'blue': #70d6ff,
+);
+
+@function get-color($color) {
+  @return map-get($colors, $color);
+}

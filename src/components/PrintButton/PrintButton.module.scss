@@ -1,0 +1,21 @@
+@import '../../stylesheets/main';
+
+$print-button-height: rem(80);
+
+.PrintButton {
+  display: inline-block;
+  margin: 0 auto;
+  width: 80%;
+  height: $print-button-height;
+  background: #ff6392;
+  color: get-color('white');
+  border: 0;
+  border-radius: rem(15);
+  margin-bottom: get-spacing('double');
+  font-size: rem(30);
+  font-weight: bold;
+
+  &:hover {
+    background-color: #ff9bb9;
+  }
+}

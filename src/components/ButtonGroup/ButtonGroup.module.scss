@@ -1,0 +1,21 @@
+@import '../../stylesheets/main';
+
+.ButtonGroupList {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0 get-spacing();
+  margin: 0;
+
+  > li {
+    flex: 1 0 auto;
+  }
+
+  button {
+    width: 100%;
+    background: none;
+    border: 1px solid #ddd;
+    padding: get-spacing('half');
+    cursor: pointer;
+  }
+}

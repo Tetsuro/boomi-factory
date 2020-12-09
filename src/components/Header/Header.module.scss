@@ -1,16 +1,20 @@
 @import '../../stylesheets/main';
 
+$hamburger-size: rem(80);
+
 .Header {
   display: flex;
   align-items: center;
   position: relative;
-  height: rem(60);
+  height: $hamburger-size;
   flex-shrink: 0;
-  border-bottom: 1px solid #ddd;
-
+  justify-content: center;
+  
   h1 {
     margin: 0;
-    font-size: rem(16);
+    font-size: rem(36);
+    // TODO: Use color helper
+    color: #1e96fc;
   }
 }
 
@@ -21,8 +25,16 @@
   padding: get-spacing('half');
   background: none;
   border: none;
+  height: $hamburger-size;
+  width: $hamburger-size;
+  cursor: pointer;
 
   span {
     @include visually-hidden;
+  }
+
+  svg {
+    width: rem(30);
+    height: rem(30);
   }
 }

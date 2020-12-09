@@ -3,9 +3,10 @@
 // body > div is to select the #root div.
 html,
 body,
-body>div {
+body > div {
   height: 100%;
-
+  overflow: hidden;
+  background-color: get-color('pastel-yellow');
 }
 
 .App {
