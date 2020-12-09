@@ -1,16 +1,18 @@
 import React from "react";
 import styles from "./ButtonGroup.module.scss";
 
-function ButtonGroup() {
+function ButtonGroup({buttons}) {
+
+  const buttonsMarkup = buttons.map((button, index) => (
+    <li key={index}>
+      <button onClick={button.onClick}>{button.label}</button>
+    </li>
+  ));
+
   return (
     <nav>
       <ul className={styles.ButtonGroupList}>
-        <li>
-          <button>Customize a Boomi</button>
-        </li>
-        <li>
-          <button>Select a design</button>
-        </li>
+        {buttonsMarkup}
       </ul>
     </nav>
   );
