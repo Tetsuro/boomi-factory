@@ -13,14 +13,19 @@ function App() {
   const [customizeSheetIsOpen, setCustomizeSheetIsOpen] = useState(false);
 
 
+  const handleSheetClose = () => {
+    setDesignSheetIsOpen(false);
+    setCustomizeSheetIsOpen(false);
+  };
+
   const customizeSheetMarkup = customizeSheetIsOpen ? (
-    <Sheet>
+    <Sheet title="Customize a Boomi" onClose={handleSheetClose}>
       Customize
     </Sheet>
   ) : null;
 
   const designSheetMarkup = designSheetIsOpen ? (
-    <Sheet>
+    <Sheet title="Select a design" onClose={handleSheetClose}>
       Design
     </Sheet>
   ) : null;

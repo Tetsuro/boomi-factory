@@ -1,10 +1,16 @@
 import React from 'react';
-// import styles from './PrintButton.module.scss';
+import styles from './Sheet.module.scss';
 
-function Sheet({children}) {
+function Sheet({children, title, onClose}) {
   return (
-    <div>
-      {children}
+    <div className={styles.Sheet}>
+      <div>
+        <h2>{title}</h2>
+        <button onClick={onClose}>Close</button>
+      </div>
+      <div>
+        {children}
+      </div>
     </div>
   );
 }
