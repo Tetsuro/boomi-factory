@@ -19,11 +19,14 @@ function App() {
     setCustomizeSheetIsOpen(false);
   };
 
+  const handleSwatchClick = (color) => {
+    setActiveColor(color);
+  }
 
   // TODO: Sheet should have "open" prop to toggle.
   const customizeSheetMarkup = customizeSheetIsOpen ? (
     <Sheet title="Customize a Boomi" onClose={handleSheetClose}>
-        <ColorsList />
+      <ColorsList onSwatchClick={handleSwatchClick} />
     </Sheet>
   ) : null;
 

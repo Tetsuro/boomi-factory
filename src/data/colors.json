@@ -9,6 +9,11 @@
       "name": "Strawberry",
       "primary": "#FFA9D4",
       "secondary": "#FF61B8"
+    },
+    {
+      "name": "Minty Fresh",
+      "primary": "#CCE6C8",
+      "secondary": "#9FD8D4"
     }
   ]
 }
