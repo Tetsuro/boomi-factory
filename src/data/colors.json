@@ -1,0 +1,19 @@
+{
+  "colors": [
+    {
+      "name": "Original",
+      "primary": "#F9F399",
+      "secondary": "#FDCB96"
+    },
+    {
+      "name": "Strawberry",
+      "primary": "#FFA9D4",
+      "secondary": "#FF61B8"
+    },
+    {
+      "name": "Minty Fresh",
+      "primary": "#CCE6C8",
+      "secondary": "#9FD8D4"
+    }
+  ]
+}
