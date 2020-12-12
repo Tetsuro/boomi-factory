@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Preview from "./components/Preview";
 import PrintButton from "./components/PrintButton";
 import Sheet from "./components/Sheet";
+import ColorsList from "./components/ColorsList"
 import {colors} from "./data/colors.json";
 
 import styles from "./App.module.scss";
@@ -22,7 +23,7 @@ function App() {
   // TODO: Sheet should have "open" prop to toggle.
   const customizeSheetMarkup = customizeSheetIsOpen ? (
     <Sheet title="Customize a Boomi" onClose={handleSheetClose}>
-      Customize
+        <ColorsList />
     </Sheet>
   ) : null;
 

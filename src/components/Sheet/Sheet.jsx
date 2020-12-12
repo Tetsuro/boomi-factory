@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Sheet.module.scss';
 
 function Sheet({children, title, onClose}) {
+  console.log(children)
   return (
     <div className={styles.Sheet}>
       <div>
