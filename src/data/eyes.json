@@ -1,0 +1,14 @@
+{
+  "eyes": [
+    {
+      "name": "Original",
+      "handle": "original",
+      "fileName": "original.svg"
+    },
+    {
+      "name": "Blink",
+      "handle": "blink",
+      "fileName": "blink.svg"
+    }
+  ]
+}
