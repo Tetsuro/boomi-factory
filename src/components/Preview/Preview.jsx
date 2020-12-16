@@ -1,22 +1,15 @@
 import React from 'react';
 import styles from './Preview.module.scss';
 import {ReactComponent as Boomi} from './svg/boomi.svg';
-import {ReactComponent as Original} from './svg/eyes-original.svg';
-import {ReactComponent as Blink} from './svg/eyes-blink.svg';
+import {eyesList} from "./components/Eyes";
 
 function Preview({activeColor}) {
 
   const {primary, secondary} = activeColor;
-
   // TODO: Mock Eyes
   const mockEyesHandle = "original";
+  const SelectedEyes = eyesList[mockEyesHandle];
 
-  const Eyes = {
-    'original': Original,
-    'blink': Blink,
-  }[mockEyesHandle];
-
-  console.log(Eyes)
   const primaryStyles = {
     fill: primary,
   }
@@ -40,11 +33,9 @@ function Preview({activeColor}) {
         <polygon points="209.9 273.7 205.9 291.71 205.9 404.81 227.79 404.81 227.79 384.03 367.9 384.03 367.9 404.81 389.79 404.81 390.79 291.71 385.79 273.7 209.9 273.7" style={primaryStyles}></polygon>
         <polygon points="205.9 464.6 205.9 423.23 227.79 423.23 227.79 445.11 367.9 445.11 367.9 423.23 389.79 423.23 389.79 464.6 205.9 464.6" style={primaryStyles}></polygon>
       </g>
-      <Eyes />
+      <SelectedEyes />
     </svg>
   );
-
-
 
   return (
     <div className={styles.Preview}>
