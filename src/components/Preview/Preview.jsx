@@ -1,14 +1,13 @@
 import React from 'react';
 import styles from './Preview.module.scss';
 import {ReactComponent as Boomi} from './svg/boomi.svg';
-import {eyesList} from "./components/Eyes";
+import {eyesMap} from '../EyesList';
 
-function Preview({activeColor}) {
+function Preview({activeColor, activeEyes}) {
 
   const {primary, secondary} = activeColor;
-  // TODO: Mock Eyes
-  const mockEyesHandle = "original";
-  const SelectedEyes = eyesList[mockEyesHandle];
+
+  const SelectedEyes = eyesMap[activeEyes];
 
   const primaryStyles = {
     fill: primary,
