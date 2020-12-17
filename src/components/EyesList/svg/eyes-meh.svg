@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 538.32 725.47">
+  <g id="Right">
+    <path id="Bottom_Lid" data-name="Bottom Lid" d="M444.49,476.29a80.61,80.61,0,0,0-.58,9.56c0,28.35,14.66,51.34,32.75,51.34s32.74-23,32.74-51.34a78.55,78.55,0,0,0-.58-9.56Z" transform="translate(-13.85 -60.71)" style="fill: #fff;stroke: #231f20;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2px"/>
+    <path d="M508.82,476.29H473.18a45.49,45.49,0,0,0-1,9.56c0,18,10.28,32.6,23,32.6a17,17,0,0,0,7.77-1.92,72,72,0,0,0,6.49-30.68A78.55,78.55,0,0,0,508.82,476.29Z" transform="translate(-13.85 -60.71)" style="stroke: #231f20;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2px"/>
+    <path id="Top_Lid" data-name="Top Lid" d="M476.66,434.52c-16,0-29.31,18-32.17,41.77h64.33C506,452.51,492.65,434.52,476.66,434.52Z" transform="translate(-13.85 -60.71)" style="fill: none;stroke: #231f20;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2px"/>
+  </g>
+  <g id="Left">
+    <path id="Bottom_Lid-2" data-name="Bottom Lid" d="M114.57,476.29a80.63,80.63,0,0,0-.57,9.56c0,28.35,14.65,51.34,32.74,51.34s32.74-23,32.74-51.34a80.63,80.63,0,0,0-.57-9.56Z" transform="translate(-13.85 -60.71)" style="fill: #fff;stroke: #231f20;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2px"/>
+    <path d="M178.91,476.29H143.27a44.83,44.83,0,0,0-1,9.56c0,18,10.28,32.6,23,32.6a17,17,0,0,0,7.78-1.92,72.11,72.11,0,0,0,6.48-30.68A80.63,80.63,0,0,0,178.91,476.29Z" transform="translate(-13.85 -60.71)" style="stroke: #231f20;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2px"/>
+    <path id="Top_Lid-2" data-name="Top Lid" d="M146.74,434.52c-16,0-29.31,18-32.17,41.77h64.34C176.05,452.51,162.74,434.52,146.74,434.52Z" transform="translate(-13.85 -60.71)" style="fill: none;stroke: #231f20;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2px"/>
+  </g>
+</svg>
