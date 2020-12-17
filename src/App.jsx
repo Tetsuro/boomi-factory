@@ -54,6 +54,7 @@ function App() {
   return (
     <div className={styles.App}>
       <Header />
+      <Preview activeColor={activeColor} activeEyes={activeEyes} />
       <ButtonGroup buttons={[
         {
           onClick: handleCustomizeClick,
@@ -64,7 +65,6 @@ function App() {
           label: "Select eyes"
         }
       ]} />
-      <Preview activeColor={activeColor} activeEyes={activeEyes} />
       <PrintButton />
       {customizeSheetMarkup}
       {designSheetMarkup}

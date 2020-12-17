@@ -1,15 +1,52 @@
 @import '../../stylesheets/main';
 
+$close-button-size: rem(40);
+$sheet-border-radius: rem(20);
+$header-height: rem(70);
+
 .Sheet {
   position: fixed;
-  top: 60%;
+  bottom: 0;
   left: 0;
   background: get-color('white');
   width: 100%;
-  height: 100%;
+  height: 40%;
+  // TODO: Put in to helper.css?
+  border-radius: $sheet-border-radius;
 }
 
 .Header {
   display: flex;
   justify-content: space-between;
+  // TODO: Add to helper.css
+  border-bottom: 1px solid #e6e6e6;
+  height: $header-height;
+  padding: 0 get-spacing();
+  align-items: center;
+}
+
+.Body {
+  padding: get-spacing();
+  overflow: scroll;
+  height: calc(100% - #{$header-height} - #{get-spacing('half')});
+}
+
+.CloseButton {
+  @include reset-button;
+  width: $close-button-size;
+  height: $close-button-size;
+  border-radius: get-radius();
+
+  &:hover {
+    // TODO: Add to color map
+    background: #e6e6e6;
+  }
+
+  > span {
+    @include visually-hidden;
+  }
+  
+  > svg {
+    vertical-align: middle;
+  }
 }
