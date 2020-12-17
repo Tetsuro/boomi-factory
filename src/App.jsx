@@ -29,19 +29,17 @@ function App() {
     setActiveEyes(eyes);
   }
 
-  // TODO: Sheet should have "open" prop to toggle.
-  const customizeSheetMarkup = customizeSheetIsOpen ? (
-    <Sheet title="Select colour scheme" onClose={handleSheetClose}>
+  const customizeSheetMarkup = (
+    <Sheet title="Select colour scheme" onClose={handleSheetClose} isOpen={customizeSheetIsOpen}>
       <ColorsList onSwatchClick={handleSwatchClick} />
     </Sheet>
-  ) : null;
+  );
 
-  // TODO: Sheet should have "open" prop to toggle.
-  const designSheetMarkup = designSheetIsOpen ? (
-    <Sheet title="Select eyes" onClose={handleSheetClose}>
+  const designSheetMarkup = (
+    <Sheet title="Select eyes" onClose={handleSheetClose} isOpen={designSheetIsOpen}>
       <EyesList onEyesClick={handleEyesClick} />
     </Sheet>
-  ) : null;
+  );
 
   const handleCustomizeClick = () => {
     setCustomizeSheetIsOpen(true);

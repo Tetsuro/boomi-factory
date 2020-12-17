@@ -3,8 +3,8 @@ import styles from './Sheet.module.scss';
 
 import {ReactComponent as CloseIcon} from '../../icons/close.svg';
 
-function Sheet({children, title, onClose}) {
-  return (
+function Sheet({isOpen = false, children, title, onClose}) {
+  return isOpen ? (
     <div className={styles.Sheet}>
       <div className={styles.Header}>
         <h2>{title}</h2>
@@ -17,7 +17,7 @@ function Sheet({children, title, onClose}) {
         {children}
       </div>
     </div>
-  );
+  ) : null;
 }
 
 export default Sheet;
