@@ -1,7 +1,7 @@
 import React from "react";
-import styles from "./HamburgerMenu.module.scss";
+import styles from "./MobileMenu.module.scss";
 
-function HamburgerMenu({ open }) {
+function MobileMenu({ open }) {
   return open ? (
     <div className={styles.Wrapper}>
       <ul>
@@ -22,4 +22,4 @@ function HamburgerMenu({ open }) {
   ) : null;
 }
 
-export default HamburgerMenu;
+export default MobileMenu;
