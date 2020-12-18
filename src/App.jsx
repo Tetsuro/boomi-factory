@@ -8,6 +8,8 @@ import ColorsList from "./components/ColorsList";
 import {EyesList} from "./components/EyesList";
 import {colors} from "./data/colors.json";
 
+import useKeyPress from "./hooks/useKeyPress";
+
 import styles from "./App.module.scss";
 
 function App() {
@@ -29,19 +31,17 @@ function App() {
     setActiveEyes(eyes);
   }
 
-  // TODO: Sheet should have "open" prop to toggle.
-  const customizeSheetMarkup = customizeSheetIsOpen ? (
-    <Sheet title="Select colour scheme" onClose={handleSheetClose}>
+  const customizeSheetMarkup = (
+    <Sheet title="Select colour scheme" onClose={handleSheetClose} isOpen={customizeSheetIsOpen}>
       <ColorsList onSwatchClick={handleSwatchClick} />
     </Sheet>
-  ) : null;
+  );
 
-  // TODO: Sheet should have "open" prop to toggle.
-  const designSheetMarkup = designSheetIsOpen ? (
-    <Sheet title="Select eyes" onClose={handleSheetClose}>
+  const designSheetMarkup = (
+    <Sheet title="Select eyes" onClose={handleSheetClose} isOpen={designSheetIsOpen}>
       <EyesList onEyesClick={handleEyesClick} />
     </Sheet>
-  ) : null;
+  );
 
   const handleCustomizeClick = () => {
     setCustomizeSheetIsOpen(true);
@@ -51,9 +51,17 @@ function App() {
     setDesignSheetIsOpen(true);
   };  
 
+  const closeSheets = () => {
+    setCustomizeSheetIsOpen(false);
+    setDesignSheetIsOpen(false);
+  };
+
+  useKeyPress(27, closeSheets);
+  
   return (
     <div className={styles.App}>
       <Header />
+      <Preview activeColor={activeColor} activeEyes={activeEyes} />
       <ButtonGroup buttons={[
         {
           onClick: handleCustomizeClick,
@@ -64,7 +72,6 @@ function App() {
           label: "Select eyes"
         }
       ]} />
-      <Preview activeColor={activeColor} activeEyes={activeEyes} />
       <PrintButton />
       {customizeSheetMarkup}
       {designSheetMarkup}

@@ -1,3 +1,15 @@
 @import './colors';
 @import './media-queries';
 @import './helpers';
+
+// TODO: Move this into its own file
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
