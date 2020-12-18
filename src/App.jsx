@@ -8,6 +8,8 @@ import ColorsList from "./components/ColorsList";
 import {EyesList} from "./components/EyesList";
 import {colors} from "./data/colors.json";
 
+import useKeyPress from "./hooks/useKeyPress";
+
 import styles from "./App.module.scss";
 
 function App() {
@@ -49,6 +51,13 @@ function App() {
     setDesignSheetIsOpen(true);
   };  
 
+  const closeSheets = () => {
+    setCustomizeSheetIsOpen(false);
+    setDesignSheetIsOpen(false);
+  };
+
+  useKeyPress(27, closeSheets);
+  
   return (
     <div className={styles.App}>
       <Header />
