@@ -1,0 +1,25 @@
+@import '../../stylesheets/main';
+
+$mobile-menu-width: rem(250);
+
+.MobileMenu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: get-color('white');
+  height: 100%;
+  padding: get-spacing();
+  width: $mobile-menu-width;
+  z-index: 1;
+
+  > h2 {
+    margin: 0;
+    padding: 0;
+  }
+
+  > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}

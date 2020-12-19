@@ -1,9 +1,10 @@
 import React from "react";
-import styles from "./HamburgerMenu.module.scss";
+import styles from "./MobileMenu.module.scss";
 
-function HamburgerMenu({ open }) {
+function MobileMenu({ open }) {
   return open ? (
-    <div className={styles.Wrapper}>
+    <nav className={styles.MobileMenu}>
+      <h2>Menu</h2>
       <ul>
         <li>
           <a href="#">What's a Boomi?</a>
@@ -12,14 +13,11 @@ function HamburgerMenu({ open }) {
           <a href="#">Build a Boomi</a>
         </li>
         <li>
-          <a href="#">Gallery</a>
-        </li>
-        <li>
           <a href="#">Donate</a>
         </li>
       </ul>
-    </div>
+    </nav>
   ) : null;
 }
 
-export default HamburgerMenu;
+export default MobileMenu;
