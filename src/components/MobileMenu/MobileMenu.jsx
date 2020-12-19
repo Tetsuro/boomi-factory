@@ -3,7 +3,8 @@ import styles from "./MobileMenu.module.scss";
 
 function MobileMenu({ open }) {
   return open ? (
-    <div className={styles.Wrapper}>
+    <nav className={styles.MobileMenu}>
+      <h2>Menu</h2>
       <ul>
         <li>
           <a href="#">What's a Boomi?</a>
@@ -12,13 +13,10 @@ function MobileMenu({ open }) {
           <a href="#">Build a Boomi</a>
         </li>
         <li>
-          <a href="#">Gallery</a>
-        </li>
-        <li>
           <a href="#">Donate</a>
         </li>
       </ul>
-    </div>
+    </nav>
   ) : null;
 }
 

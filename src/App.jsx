@@ -53,21 +53,23 @@ function App() {
     setDesignSheetIsOpen(true);
   };  
 
-  const closeSheets = () => {
+  const closeOverlays = () => {
     setCustomizeSheetIsOpen(false);
     setDesignSheetIsOpen(false);
+    setMobileMenuIsOpen(false);
   };
 
   const handleMobileMenuActivatorClick = () => {
     mobileMenuIsOpen ? setMobileMenuIsOpen(false) : setMobileMenuIsOpen(true);
   }
 
-  useKeyPress(27, closeSheets);
+  useKeyPress(27, closeOverlays);
   
   return (
     <div className={styles.App}>
       <Header onMobileMenuActivatorClick={handleMobileMenuActivatorClick} />
       <Preview activeColor={activeColor} activeEyes={activeEyes} />
+      {/* <Overlay /> */}
       <ButtonGroup buttons={[
         {
           onClick: handleCustomizeClick,

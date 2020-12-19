@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./Header.module.scss";
-import { ReactComponent as HamburgerActivatorIcon } from "./icons/menu.svg";
+import { ReactComponent as HamburgerIcon } from "./icons/menu.svg";
 
 function Header({onMobileMenuActivatorClick}) {
   function handleClick() {
@@ -10,8 +10,8 @@ function Header({onMobileMenuActivatorClick}) {
   return (
     <div className={styles.Header}>
       <h1>Boomi Factory</h1>
-      <button className={styles.HamburgerActivator} onClick={handleClick}>
-        <HamburgerActivatorIcon />
+      <button className={styles.MobileMenuActivator} onClick={handleClick}>
+        <HamburgerIcon />
         <span>Open menu</span>
       </button>
     </div>
