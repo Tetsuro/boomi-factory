@@ -6,6 +6,7 @@ import PrintButton from "./components/PrintButton";
 import Sheet from "./components/Sheet";
 import ColorsList from "./components/ColorsList";
 import MobileMenu from "./components/MobileMenu";
+import Overlay from "./components/Overlay";
 import {EyesList} from "./components/EyesList";
 import {colors} from "./data/colors.json";
 
@@ -34,7 +35,7 @@ function App() {
   }
 
   const customizeSheetMarkup = (
-    <Sheet title="Select colour scheme" onClose={handleSheetClose} isOpen={customizeSheetIsOpen}>
+    <Sheet title="Select colours" onClose={handleSheetClose} isOpen={customizeSheetIsOpen}>
       <ColorsList onSwatchClick={handleSwatchClick} />
     </Sheet>
   );
@@ -63,17 +64,18 @@ function App() {
     mobileMenuIsOpen ? setMobileMenuIsOpen(false) : setMobileMenuIsOpen(true);
   }
 
+  const overlayIsOpen = mobileMenuIsOpen || designSheetIsOpen || customizeSheetIsOpen;
+
   useKeyPress(27, closeOverlays);
   
   return (
     <div className={styles.App}>
       <Header onMobileMenuActivatorClick={handleMobileMenuActivatorClick} />
       <Preview activeColor={activeColor} activeEyes={activeEyes} />
-      {/* <Overlay /> */}
       <ButtonGroup buttons={[
         {
           onClick: handleCustomizeClick,
-          label: "Select colour scheme"
+          label: "Select colours"
         },
         {
           onClick: handleDesignClick,
@@ -84,6 +86,7 @@ function App() {
       <PrintButton />
       {customizeSheetMarkup}
       {designSheetMarkup}
+      <Overlay isOpen={overlayIsOpen} />
     </div>
   );
 }

@@ -10,6 +10,7 @@ $mobile-menu-width: rem(250);
   height: 100%;
   padding: get-spacing();
   width: $mobile-menu-width;
+  z-index: 1;
 
   > h2 {
     margin: 0;
