@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './Overlay.module.scss';
 
-function Overlay({isOpen = false, children, title, onClose}) {
+function Overlay({isOpen = false, onClick}) {
   return isOpen ? (
-    <div className={styles.Overlay} aria-hidden="true">
+    <div className={styles.Overlay} aria-hidden="true" onClick={onClick}>
     </div>
   ) : null;
 }

@@ -86,7 +86,7 @@ function App() {
       <PrintButton />
       {customizeSheetMarkup}
       {designSheetMarkup}
-      <Overlay isOpen={overlayIsOpen} />
+      <Overlay isOpen={overlayIsOpen} onClick={closeOverlays}/>
     </div>
   );
 }
