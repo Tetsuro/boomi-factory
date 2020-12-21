@@ -9,12 +9,17 @@ $hamburger-size: rem(80);
   height: $hamburger-size;
   flex-shrink: 0;
   justify-content: center;
+  transition: transform ease 200ms;
   
   h1 {
     margin: 0;
     font-size: rem(36);
     // TODO: Use color helper
     color: #1e96fc;
+  }
+
+  &.hidden {
+    transform: translateY(-100%);
   }
 }
 
