@@ -3,6 +3,7 @@
 $close-button-size: rem(40);
 $sheet-border-radius: rem(20);
 $header-height: rem(70);
+$transition-duration: 100ms;
 
 .Sheet {
   position: fixed;
@@ -15,8 +16,8 @@ $header-height: rem(70);
   opacity: 0;
   // TODO: Put in to helper.css?
   border-radius: $sheet-border-radius $sheet-border-radius 0 0;
+  transition-duration: $transition-duration;
   transform: translateY(60%);
-  transition-duration: 100ms;
   transition-timing-function: ease-in;
   transition-property: opacity, transform;
 }

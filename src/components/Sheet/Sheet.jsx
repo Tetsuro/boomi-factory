@@ -1,6 +1,7 @@
 import React from 'react';
 import {CSSTransition} from 'react-transition-group';
 import styles from './Sheet.module.scss';
+import {classNames} from '../../utilities/classNames';
 
 import {ReactComponent as CloseIcon} from '../../icons/close.svg';
 
@@ -13,11 +14,6 @@ function Sheet({isOpen = false, children, title, onClose}) {
     exitActive: classNames(styles.Sheet, styles['Sheet-exit-active']),
     exitDone: classNames(styles.Sheet, styles['Sheet-exit-done']),
   };
-
-  // TODO: Move to utilities file.
-  function classNames(...classes) {
-    return classes.filter(Boolean).join(' ');
-  }
 
   return (
     <CSSTransition in={isOpen} timeout={{enter: 0, exit: 200}} classNames={transitionClassNames} unmountOnExit>
