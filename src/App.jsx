@@ -64,7 +64,7 @@ function App() {
     mobileMenuIsOpen ? setMobileMenuIsOpen(false) : setMobileMenuIsOpen(true);
   }
 
-  const overlayIsOpen = mobileMenuIsOpen || designSheetIsOpen || customizeSheetIsOpen;
+  const overlayIsOpen = mobileMenuIsOpen;
 
   useKeyPress(27, closeOverlays);
   
