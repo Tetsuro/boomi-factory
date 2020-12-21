@@ -10,7 +10,7 @@ import Overlay from "./components/Overlay";
 import {EyesList} from "./components/EyesList";
 import {colors} from "./data/colors.json";
 
-import useKeyPress from "./hooks/useKeyPress";
+import {useKeyPress} from "./hooks/useKeyPress";
 
 import styles from "./App.module.scss";
 
@@ -64,7 +64,7 @@ function App() {
     mobileMenuIsOpen ? setMobileMenuIsOpen(false) : setMobileMenuIsOpen(true);
   }
 
-  const overlayIsOpen = mobileMenuIsOpen || designSheetIsOpen || customizeSheetIsOpen;
+  const overlayIsOpen = mobileMenuIsOpen;
 
   useKeyPress(27, closeOverlays);
   

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-export default function useKeyPress(targetKey, handler) {
+export function useKeyPress(targetKey, handler) {
   function handleKeyDown({ keyCode }) {
     if (keyCode === targetKey) {
       handler();
