@@ -10,20 +10,26 @@ $header-height: rem(70);
   left: 0;
   background: get-color('white');
   width: 100%;
-  height: 50%;
+  height: 40%;
   z-index: 1;
   opacity: 0;
   // TODO: Put in to helper.css?
   border-radius: $sheet-border-radius $sheet-border-radius 0 0;
-  transition: opacity 200ms;
+  transform: translateY(60%);
+  transition-duration: 100ms;
+  transition-timing-function: ease-in;
+  transition-property: opacity, transform;
 }
 
 .Sheet-enter-done {
   opacity: 1;
+  transform: translateY(0%);
 }
 
 .Sheet-exit-done {
   opacity: 0;
+  transform: translateY(60%);
+
 }
 
 .Header {

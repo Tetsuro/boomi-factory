@@ -21,18 +21,18 @@ function Sheet({isOpen = false, children, title, onClose}) {
 
   return (
     <CSSTransition in={isOpen} timeout={{enter: 0, exit: 200}} classNames={transitionClassNames} unmountOnExit>
-        <div>
-          <div className={styles.Header}>
-            <h2>{title}</h2>
-            <button className={styles.CloseButton} onClick={onClose}>
-              <span>Close</span>
-              <CloseIcon />
-            </button>
-          </div>
-          <div className={styles.Body}>
-            {children}
-          </div>
+      <div>
+        <div className={styles.Header}>
+          <h2>{title}</h2>
+          <button className={styles.CloseButton} onClick={onClose}>
+            <span>Close</span>
+            <CloseIcon />
+          </button>
         </div>
+        <div className={styles.Body}>
+          {children}
+        </div>
+      </div>
     </CSSTransition>
   );
 }
