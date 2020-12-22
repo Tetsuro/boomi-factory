@@ -9,7 +9,9 @@ $hamburger-size: rem(80);
   height: $hamburger-size;
   flex-shrink: 0;
   justify-content: center;
-  
+  transition: transform 100ms;
+  transform: translateY(0%);
+
   h1 {
     margin: 0;
     font-size: rem(36);
@@ -17,6 +19,15 @@ $hamburger-size: rem(80);
     color: #1e96fc;
   }
 }
+
+.Header-enter-done {
+  transform: translateY(0%);
+}
+
+.Header-exit-active {
+  transform: translateY(-100%);
+}
+
 
 .MobileMenuActivator {
   position: absolute;

@@ -14,11 +14,8 @@ $transition-duration: 100ms;
   height: 40%;
   z-index: 1;
   opacity: 0;
-  // TODO: Put in to helper.css?
-  border-radius: $sheet-border-radius $sheet-border-radius 0 0;
   transition-duration: $transition-duration;
   transform: translateY(60%);
-  transition-timing-function: ease-in;
   transition-property: opacity, transform;
 }
 
@@ -30,7 +27,6 @@ $transition-duration: 100ms;
 .Sheet-exit-done {
   opacity: 0;
   transform: translateY(60%);
-
 }
 
 .Header {

@@ -2,8 +2,9 @@ import React from 'react';
 import styles from './Preview.module.scss';
 import {ReactComponent as Boomi} from './svg/boomi.svg';
 import {eyesMap} from '../EyesList';
+import {classNames} from '../../utilities/classNames';
 
-function Preview({activeColor, activeEyes}) {
+function Preview({activeColor, activeEyes, minimized}) {
 
   const {primary, secondary} = activeColor;
 
@@ -16,6 +17,8 @@ function Preview({activeColor, activeEyes}) {
   const secondaryStyles = {
     fill: secondary,
   }
+
+  const previewClassNames = classNames(styles.Preview, minimized && styles.minimized)
 
   const fillColorMarkup = (
     <svg id="Fill-Colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 538.32 725.47">
@@ -37,7 +40,7 @@ function Preview({activeColor, activeEyes}) {
   );
 
   return (
-    <div className={styles.Preview}>
+    <div className={previewClassNames}>
       {fillColorMarkup}
       <Boomi />
     </div>

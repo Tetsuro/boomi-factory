@@ -64,14 +64,15 @@ function App() {
     mobileMenuIsOpen ? setMobileMenuIsOpen(false) : setMobileMenuIsOpen(true);
   }
 
-  const overlayIsOpen = mobileMenuIsOpen;
+  const overlayIsOpen = mobileMenuIsOpen || customizeSheetIsOpen || designSheetIsOpen;
+  const sheetIsOpen = customizeSheetIsOpen || designSheetIsOpen;
 
   useKeyPress(27, closeOverlays);
   
   return (
     <div className={styles.App}>
-      <Header onMobileMenuActivatorClick={handleMobileMenuActivatorClick} />
-      <Preview activeColor={activeColor} activeEyes={activeEyes} />
+      <Header show={!sheetIsOpen} onMobileMenuActivatorClick={handleMobileMenuActivatorClick} />
+      <Preview activeColor={activeColor} activeEyes={activeEyes} minimized={sheetIsOpen}/>
       <ButtonGroup buttons={[
         {
           onClick: handleCustomizeClick,
@@ -86,7 +87,7 @@ function App() {
       <PrintButton />
       {customizeSheetMarkup}
       {designSheetMarkup}
-      <Overlay isOpen={overlayIsOpen} onClick={closeOverlays}/>
+      <Overlay isOpen={overlayIsOpen} transparent={sheetIsOpen} onClick={closeOverlays}/>
     </div>
   );
 }
