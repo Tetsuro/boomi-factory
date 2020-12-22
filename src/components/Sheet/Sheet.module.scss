@@ -16,7 +16,6 @@ $transition-duration: 100ms;
   opacity: 0;
   transition-duration: $transition-duration;
   transform: translateY(60%);
-  transition-timing-function: ease-in;
   transition-property: opacity, transform;
 }
 
@@ -28,7 +27,6 @@ $transition-duration: 100ms;
 .Sheet-exit-done {
   opacity: 0;
   transform: translateY(60%);
-
 }
 
 .Header {

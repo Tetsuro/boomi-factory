@@ -9,19 +9,25 @@ $hamburger-size: rem(80);
   height: $hamburger-size;
   flex-shrink: 0;
   justify-content: center;
-  transition: transform ease 200ms;
-  
+  transition: all ease 100ms;
+  transform: translateY(0%);
+
   h1 {
     margin: 0;
     font-size: rem(36);
     // TODO: Use color helper
     color: #1e96fc;
   }
-
-  &.hidden {
-    transform: translateY(-100%);
-  }
 }
+
+.Header-enter-done {
+  transform: translateY(0%);
+}
+
+.Header-exit-active {
+  transform: translateY(-100%);
+}
+
 
 .MobileMenuActivator {
   position: absolute;
