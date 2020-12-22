@@ -9,7 +9,7 @@ $hamburger-size: rem(80);
   height: $hamburger-size;
   flex-shrink: 0;
   justify-content: center;
-  transition: all ease 100ms;
+  transition: transform 100ms;
   transform: translateY(0%);
 
   h1 {
