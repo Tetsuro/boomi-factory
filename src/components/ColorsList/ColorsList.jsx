@@ -10,9 +10,11 @@ function ColorsList({onSwatchClick}) {
   const listMarkup = colors.map((color, index) => (
     <li key={index}>
       <button className={styles.Button} onClick={() => handleClick(color)}>
-        <span>{color.name}</span>
-        <span className={styles.Swatch} style={{'backgroundColor': color.primary}}></span>
-        <span className={styles.Swatch} style={{'backgroundColor': color.secondary}}></span>
+        <div className={styles.SwatchWrapper}>
+          <span className={styles.Swatch} style={{'backgroundColor': color.primary}}></span>
+          <span className={styles.Swatch} style={{'backgroundColor': color.secondary}}></span>
+        </div>
+        <div className={styles.Label}>{color.name}</div>
       </button>
     </li>
   ));
