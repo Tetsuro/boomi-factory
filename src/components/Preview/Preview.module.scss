@@ -4,8 +4,9 @@
   height: 100%;
   overflow-y: hidden;
   position: relative;
+  margin: get-spacing();
   // Used to visually centre Boomi because of his antenna on the left.
-  margin-left: -#{get-spacing('double')};
+  margin-left: 0;
   transition: height 200ms;
 
   > svg {
@@ -19,5 +20,5 @@
 }
 
 .minimized {
-  height: 60%;
+  height: calc(60% - #{get-spacing('double')});
 }
