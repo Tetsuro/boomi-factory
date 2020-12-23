@@ -1,20 +1,26 @@
 import React from "react";
+import { useTranslation } from 'react-i18next';
+
 import styles from "./MobileMenu.module.scss";
 
 function MobileMenu({ open }) {
+  const {t, i18n} = useTranslation();
+
   return open ? (
     <nav className={styles.MobileMenu}>
-      <h2>Menu</h2>
+      <h2>{t('menu.menu')}</h2>
       <ul>
         <li>
-          <a href="#">What's a Boomi?</a>
+          <a href="#">{t('menu.whats_a_boomi')}</a>
         </li>
         <li>
-          <a href="#">Build a Boomi</a>
+          <a href="#">{t('menu.donate')}</a>
         </li>
-        <li>
-          <a href="#">Donate</a>
-        </li>
+      </ul>
+      <ul>
+        <li><button onClick={() => i18n.changeLanguage('en')}>🇬🇧 English</button></li>
+        <li><button onClick={() => i18n.changeLanguage('fr')}>🇫🇷 French</button></li>
+        <li><button onClick={() => i18n.changeLanguage('jp')}>🇯🇵 Japanese</button></li>
       </ul>
     </nav>
   ) : null;
