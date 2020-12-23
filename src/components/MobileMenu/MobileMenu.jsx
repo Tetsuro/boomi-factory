@@ -19,8 +19,8 @@ function MobileMenu({ open }) {
       </ul>
       <ul>
         <li><button onClick={() => i18n.changeLanguage('en')}>🇬🇧 English</button></li>
-        <li><button onClick={() => i18n.changeLanguage('fr')}>🇫🇷 French</button></li>
-        <li><button onClick={() => i18n.changeLanguage('jp')}>🇯🇵 Japanese</button></li>
+        <li><button onClick={() => i18n.changeLanguage('fr')}>🇫🇷 Français</button></li>
+        <li><button onClick={() => i18n.changeLanguage('jp')}>🇯🇵 日本語</button></li>
       </ul>
     </nav>
   ) : null;
