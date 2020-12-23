@@ -1,4 +1,6 @@
 import React, {useState} from "react";
+import {useTranslation} from 'react-i18next';
+
 import ButtonGroup from "./components/ButtonGroup";
 import Header from "./components/Header";
 import Preview from "./components/Preview";
@@ -21,6 +23,9 @@ function App() {
   const [activeColor, setActiveColor] = useState(colors[0]);
   const [activeEyes, setActiveEyes] = useState('original');
 
+  const {t} = useTranslation();
+
+
   const handleSheetClose = () => {
     setDesignSheetIsOpen(false);
     setCustomizeSheetIsOpen(false);
@@ -35,13 +40,13 @@ function App() {
   }
 
   const customizeSheetMarkup = (
-    <Sheet title="Select colours" onClose={handleSheetClose} isOpen={customizeSheetIsOpen}>
+    <Sheet title={t('customize.select_colors')} onClose={handleSheetClose} isOpen={customizeSheetIsOpen}>
       <ColorsList onSwatchClick={handleSwatchClick} />
     </Sheet>
   );
 
   const designSheetMarkup = (
-    <Sheet title="Select eyes" onClose={handleSheetClose} isOpen={designSheetIsOpen}>
+    <Sheet title={t('customize.select_colors')} onClose={handleSheetClose} isOpen={designSheetIsOpen}>
       <EyesList onEyesClick={handleEyesClick} />
     </Sheet>
   );
@@ -76,11 +81,11 @@ function App() {
       <ButtonGroup buttons={[
         {
           onClick: handleCustomizeClick,
-          label: "Select colours"
+          label: t('customize.select_colors')
         },
         {
           onClick: handleDesignClick,
-          label: "Select eyes"
+          label: t('customize.select_eyes')
         }
       ]} />
       <MobileMenu open={mobileMenuIsOpen}/>
