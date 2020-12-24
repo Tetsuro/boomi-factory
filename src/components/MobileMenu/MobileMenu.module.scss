@@ -11,6 +11,8 @@ $mobile-menu-width: rem(250);
   padding: get-spacing();
   width: $mobile-menu-width;
   z-index: 1;
+  transition: transform 200ms;
+  transform: translateX(100%);
 
   > h2 {
     margin: 0;
@@ -22,4 +24,8 @@ $mobile-menu-width: rem(250);
     margin: 0;
     padding: 0;
   }
+}
+
+.MobileMenu-enter-done {
+  transform: translateX(0);
 }
