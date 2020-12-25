@@ -2,7 +2,9 @@
 @import './media-queries';
 @import './helpers';
 
-// TODO: Move this into its own file
+// TODO: Don't use Adobe font
+@import url("https://use.typekit.net/ajs6dae.css");
+
 
 html {
   box-sizing: border-box;
@@ -13,4 +15,17 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
+}
+
+h1, h2, h3, h4 {
+  font-family: sofia-pro-soft,
+  sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  font-family: sofia-pro-soft, sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
