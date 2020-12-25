@@ -7,15 +7,13 @@ function ColorsList({activeColor, onSwatchClick}) {
   function handleClick(color) {
     onSwatchClick(color);
   }
-
-  console.log(activeColor);
-
   
   // TODO: Better key for li?
   const listMarkup = colors.map((color, index) => {
     const isActive = color === activeColor;
     const buttonClassNames = classNames(styles.Button, isActive && styles.active);
-   return (
+
+    return (
       <li key={index}>
         <button className={buttonClassNames} onClick={() => handleClick(color)}>
           <div className={styles.SwatchWrapper}>
