@@ -16,9 +16,15 @@
   border: 1px solid #ddd;
 
   &:hover,
-  &:focus {
-    // background-color: get-color('pastel-blue');
-    // border-color: get-color('pastel-blue');
+  &:focus,
+  &.active {
+    border-color: get-color('blue');
+    box-shadow: 0 0 0 3px get-color('blue');
+  }
+
+  &:active {
+    border-color: get-color('pastel-blue');
+    box-shadow: 0 0 0 3px get-color('pastel-blue');
   }
 }
 
