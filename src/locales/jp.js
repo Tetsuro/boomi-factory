@@ -2,7 +2,7 @@ const jp = {
   translation: {
     menu: {
       menu: "メニュー",
-      whats_a_boomi: "ブーミって何？",
+      whats_a_boomi: "ブーミとは？",
       donate: "寄付をする",
     },
     customize: {
