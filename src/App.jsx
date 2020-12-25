@@ -41,7 +41,7 @@ function App() {
 
   const customizeSheetMarkup = (
     <Sheet title={t('customize.select_colors')} onClose={handleSheetClose} isOpen={customizeSheetIsOpen}>
-      <ColorsList onSwatchClick={handleSwatchClick} />
+      <ColorsList activeColor={activeColor} onSwatchClick={handleSwatchClick} />
     </Sheet>
   );
 
