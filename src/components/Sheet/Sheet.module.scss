@@ -43,7 +43,7 @@ $transition-duration: 100ms;
 .Body {
   padding: get-spacing();
   overflow: scroll;
-  height: calc(100% - #{$header-height} - #{get-spacing('half')});
+  height: calc(100% - #{$header-height});
 }
 
 .CloseButton {
