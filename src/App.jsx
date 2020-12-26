@@ -46,7 +46,7 @@ function App() {
   );
 
   const designSheetMarkup = (
-    <Sheet title={t('customize.select_colors')} onClose={handleSheetClose} isOpen={designSheetIsOpen}>
+    <Sheet title={t('customize.select_eyes')} onClose={handleSheetClose} isOpen={designSheetIsOpen}>
       <EyesList onEyesClick={handleEyesClick} />
     </Sheet>
   );
