@@ -1,12 +1,13 @@
 @import '../../stylesheets/main';
 
-$hamburger-size: rem(80);
+$hamburger-size: rem(44);
+$header-height: rem(64);
 
 .Header {
   display: flex;
   align-items: center;
   position: relative;
-  height: $hamburger-size;
+  height: $header-height;
   flex-shrink: 0;
   justify-content: center;
   transition: transform 100ms;
@@ -17,13 +18,6 @@ $hamburger-size: rem(80);
     font-size: rem(36);
     // TODO: Use color helper
     color: #1e96fc;
-    font-family: sofia-pro-soft,
-    sans-serif;
-
-    font-weight: 700;
-
-    font-style: normal;
-
   }
 }
 
@@ -38,21 +32,30 @@ $hamburger-size: rem(80);
 
 .MobileMenuActivator {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: get-spacing('half');
+  right: get-spacing('half');
   padding: get-spacing('half');
   background: none;
   border: none;
   height: $hamburger-size;
   width: $hamburger-size;
+  border-radius: calc(#{$hamburger-size} / 2);
   cursor: pointer;
+
+  &:hover {
+    background-color: #1e96fc;
+
+    svg {
+      fill: get-color('white');
+    }
+  }
 
   span {
     @include visually-hidden;
   }
 
   svg {
-    width: rem(30);
-    height: rem(30);
+    height: rem(24);
+    width: rem(24);
   }
 }
