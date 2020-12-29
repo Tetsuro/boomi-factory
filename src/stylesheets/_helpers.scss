@@ -31,3 +31,9 @@ $spacings: ('normal': rem(20),
   cursor: pointer;
   padding: 0;
 }
+
+@mixin reset-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
