@@ -28,6 +28,9 @@ function MobileMenu({ open=false }) {
           <li>
             <a href="#">{t('menu.how_to_build')}</a>
           </li>
+          <li>
+            <a href="#">{t('menu.gallery')}</a>
+          </li>
           {/* <li>
             <a href="#">{t('menu.donate')}</a>
           </li> */}

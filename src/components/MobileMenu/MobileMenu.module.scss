@@ -41,18 +41,47 @@ $mobile-menu-width: rem(250);
     font-size: 1.5rem;
     font-weight: 700;
     text-decoration: none;
+    padding: get-spacing('quarter') get-spacing('half');
 
-    &:hover {
-      text-decoration: underline;
+    &:hover, 
+    &:focus {
+      background: #1e96fc;
+      color: get-color('white');
     }
   }
 
   li {
-    margin-bottom: get-spacing('half');
+    margin-bottom: get-spacing();
   }
 }
 
 .LanguageMenu {
   @include reset-list;
   padding: get-spacing();
+
+  li {
+    margin-bottom: get-spacing('half');
+  }
+
+  button {
+    @include reset-button;
+    width: 100%;
+    border: 1px solid #d7d7d7;
+    padding: get-spacing('quarter');
+    background: get-color('white');
+    border-radius: rem(10);
+
+    // TODO: Refactor to share with ColorsList buttons
+    &:hover,
+    &:focus,
+    &.active {
+      border-color: get-color('blue');
+      box-shadow: 0 0 0 3px get-color('blue');
+    }
+
+    &:active {
+      border-color: get-color('pastel-blue');
+      box-shadow: 0 0 0 3px get-color('pastel-blue');
+    }
+  }
 }
