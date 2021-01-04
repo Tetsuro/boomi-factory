@@ -42,8 +42,11 @@ $mobile-menu-width: rem(250);
     font-weight: 700;
     text-decoration: none;
     padding: get-spacing('quarter') get-spacing('half');
+    display: block;
+    line-height: 2rem;
+    border-radius: rem(10);
 
-    &:hover, 
+    &:hover,
     &:focus {
       background: #1e96fc;
       color: get-color('white');
@@ -51,7 +54,7 @@ $mobile-menu-width: rem(250);
   }
 
   li {
-    margin-bottom: get-spacing();
+    margin-bottom: get-spacing('half');
   }
 }
 
