@@ -21,7 +21,7 @@ function Header({show = true, onMobileMenuActivatorClick}) {
   return (
       <CSSTransition in={show} appear={show} timeout={{enter: 0, exit: 100}} classNames={transitionClassNames} unmountOnExit>
         <div>
-          <h1>Boomi Factory</h1>
+          <h1>Boomi</h1>
           <button className={styles.MobileMenuActivator} onClick={handleClick}>
             <HamburgerIcon />
             <span>Open menu</span>

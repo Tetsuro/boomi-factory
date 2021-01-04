@@ -6,26 +6,85 @@ $mobile-menu-width: rem(250);
   position: fixed;
   top: 0;
   right: 0;
+  display: flex;
+  flex-direction: column;
   background: get-color('white');
   height: 100%;
-  padding: get-spacing();
   width: $mobile-menu-width;
   z-index: 1;
   transition: transform 200ms;
   transform: translateX(100%);
-
-  > h2 {
-    margin: 0;
-    padding: 0;
-  }
-
-  > ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
 }
 
 .MobileMenu-enter-done {
   transform: translateX(0);
+}
+
+.Heading {
+  padding: get-spacing();
+  border-bottom: 1px solid #d7d7d7;
+
+  > h2 {
+    margin: 0;
+  }
+}
+
+.MainMenu {
+  @include reset-list;
+  flex-grow: 1;
+  // TODO: Add to helper.css
+  border-bottom: 1px solid #d7d7d7;
+  padding: get-spacing();
+
+  a {
+    color: #1e96fc;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: get-spacing('quarter') get-spacing('half');
+    display: block;
+    line-height: 2rem;
+    border-radius: rem(10);
+
+    &:hover,
+    &:focus {
+      background: #1e96fc;
+      color: get-color('white');
+    }
+  }
+
+  li {
+    margin-bottom: get-spacing('half');
+  }
+}
+
+.LanguageMenu {
+  @include reset-list;
+  padding: get-spacing();
+
+  li {
+    margin-bottom: get-spacing('half');
+  }
+
+  button {
+    @include reset-button;
+    width: 100%;
+    border: 1px solid #d7d7d7;
+    padding: get-spacing('quarter');
+    background: get-color('white');
+    border-radius: rem(10);
+
+    // TODO: Refactor to share with ColorsList buttons
+    &:hover,
+    &:focus,
+    &.active {
+      border-color: get-color('blue');
+      box-shadow: 0 0 0 3px get-color('blue');
+    }
+
+    &:active {
+      border-color: get-color('pastel-blue');
+      box-shadow: 0 0 0 3px get-color('pastel-blue');
+    }
+  }
 }

@@ -3,6 +3,8 @@ const fr = {
     menu: {
       menu: "Menu",
       whats_a_boomi: "C'est quoi un Boomi?",
+      how_to_build: "Comment en faire",
+      gallery: "Gallery",
       donate: "Faire un don",
     },
     customize: {

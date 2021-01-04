@@ -18,16 +18,24 @@ function MobileMenu({ open=false }) {
   return (
     <CSSTransition in={open} timeout={{enter: 0, exit: 200}} classNames={transitionClassNames} unmountOnExit>
       <nav>
-        <h2>{t('menu.menu')}</h2>
-        <ul>
+        <div className={styles.Heading}>
+          <h2>{t('menu.menu')}</h2>
+        </div>
+        <ul className={styles.MainMenu}>
           <li>
             <a href="#">{t('menu.whats_a_boomi')}</a>
+          </li>
+          <li>
+            <a href="#">{t('menu.how_to_build')}</a>
+          </li>
+          <li>
+            <a href="#">{t('menu.gallery')}</a>
           </li>
           {/* <li>
             <a href="#">{t('menu.donate')}</a>
           </li> */}
         </ul>
-        <ul>
+        <ul className={styles.LanguageMenu}>
           <li><button onClick={() => i18n.changeLanguage('en')}>🇬🇧 English</button></li>
           <li><button onClick={() => i18n.changeLanguage('fr')}>🇫🇷 Français</button></li>
           <li><button onClick={() => i18n.changeLanguage('jp')}>🇯🇵 日本語</button></li>
