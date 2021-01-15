@@ -1,3 +1,3 @@
-import ColorsList from "./ColorsList";
+import ColorsList from './ColorsList';
 
 export default ColorsList;
