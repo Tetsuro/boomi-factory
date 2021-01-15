@@ -1,3 +1,3 @@
-import PrintButton from "./PrintButton";
+import PrintButton from './PrintButton';
 
 export default PrintButton;

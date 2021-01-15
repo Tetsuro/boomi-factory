@@ -1,20 +1,20 @@
-import React, {useState} from "react";
-import {useTranslation} from 'react-i18next';
+import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
-import ButtonGroup from "./components/ButtonGroup";
-import Header from "./components/Header";
-import Preview from "./components/Preview";
-import PrintButton from "./components/PrintButton";
-import Sheet from "./components/Sheet";
-import ColorsList from "./components/ColorsList";
-import MobileMenu from "./components/MobileMenu";
-import Overlay from "./components/Overlay";
-import {EyesList} from "./components/EyesList";
-import {colors} from "./data/colors.json";
+import ButtonGroup from './components/ButtonGroup';
+import Header from './components/Header';
+import Preview from './components/Preview';
+import PrintButton from './components/PrintButton';
+import Sheet from './components/Sheet';
+import ColorsList from './components/ColorsList';
+import MobileMenu from './components/MobileMenu';
+import Overlay from './components/Overlay';
+import { EyesList } from './components/EyesList';
+import { colors } from './data/colors.json';
 
-import {useKeyPress} from "./hooks/useKeyPress";
+import { useKeyPress } from './hooks/useKeyPress';
 
-import styles from "./App.module.scss";
+import styles from './App.module.scss';
 
 function App() {
   const [designSheetIsOpen, setDesignSheetIsOpen] = useState(false);
@@ -23,8 +23,7 @@ function App() {
   const [activeColor, setActiveColor] = useState(colors[0]);
   const [activeEyes, setActiveEyes] = useState('original');
 
-  const {t} = useTranslation();
-
+  const { t } = useTranslation();
 
   const handleSheetClose = () => {
     setDesignSheetIsOpen(false);
@@ -33,20 +32,28 @@ function App() {
 
   const handleSwatchClick = (color) => {
     setActiveColor(color);
-  }
+  };
 
   const handleEyesClick = (eyes) => {
     setActiveEyes(eyes);
-  }
+  };
 
   const customizeSheetMarkup = (
-    <Sheet title={t('customize.select_colors')} onClose={handleSheetClose} isOpen={customizeSheetIsOpen}>
+    <Sheet
+      title={t('customize.select_colors')}
+      onClose={handleSheetClose}
+      isOpen={customizeSheetIsOpen}
+    >
       <ColorsList activeColor={activeColor} onSwatchClick={handleSwatchClick} />
     </Sheet>
   );
 
   const designSheetMarkup = (
-    <Sheet title={t('customize.select_eyes')} onClose={handleSheetClose} isOpen={designSheetIsOpen}>
+    <Sheet
+      title={t('customize.select_eyes')}
+      onClose={handleSheetClose}
+      isOpen={designSheetIsOpen}
+    >
       <EyesList onEyesClick={handleEyesClick} />
     </Sheet>
   );
@@ -57,7 +64,7 @@ function App() {
 
   const handleDesignClick = () => {
     setDesignSheetIsOpen(true);
-  };  
+  };
 
   const closeOverlays = () => {
     setCustomizeSheetIsOpen(false);
@@ -67,32 +74,46 @@ function App() {
 
   const handleMobileMenuActivatorClick = () => {
     mobileMenuIsOpen ? setMobileMenuIsOpen(false) : setMobileMenuIsOpen(true);
-  }
+  };
 
-  const overlayIsOpen = mobileMenuIsOpen || customizeSheetIsOpen || designSheetIsOpen;
+  const overlayIsOpen =
+    mobileMenuIsOpen || customizeSheetIsOpen || designSheetIsOpen;
   const sheetIsOpen = customizeSheetIsOpen || designSheetIsOpen;
 
   useKeyPress(27, closeOverlays);
-  
+
   return (
     <div className={styles.App}>
-      <Header show={!sheetIsOpen} onMobileMenuActivatorClick={handleMobileMenuActivatorClick} />
-      <Preview activeColor={activeColor} activeEyes={activeEyes} minimized={sheetIsOpen}/>
-      <ButtonGroup buttons={[
-        {
-          onClick: handleCustomizeClick,
-          label: t('customize.select_colors')
-        },
-        {
-          onClick: handleDesignClick,
-          label: t('customize.select_eyes')
-        }
-      ]} />
-      <MobileMenu open={mobileMenuIsOpen}/>
+      <Header
+        show={!sheetIsOpen}
+        onMobileMenuActivatorClick={handleMobileMenuActivatorClick}
+      />
+      <Preview
+        activeColor={activeColor}
+        activeEyes={activeEyes}
+        minimized={sheetIsOpen}
+      />
+      <ButtonGroup
+        buttons={[
+          {
+            onClick: handleCustomizeClick,
+            label: t('customize.select_colors'),
+          },
+          {
+            onClick: handleDesignClick,
+            label: t('customize.select_eyes'),
+          },
+        ]}
+      />
+      <MobileMenu open={mobileMenuIsOpen} />
       <PrintButton />
       {customizeSheetMarkup}
       {designSheetMarkup}
-      <Overlay isOpen={overlayIsOpen} transparent={sheetIsOpen} onClick={closeOverlays}/>
+      <Overlay
+        isOpen={overlayIsOpen}
+        transparent={sheetIsOpen}
+        onClick={closeOverlays}
+      />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
 export function useKeyPress(targetKey, handler) {
   function handleKeyDown({ keyCode }) {
@@ -8,10 +8,10 @@ export function useKeyPress(targetKey, handler) {
   }
 
   useEffect(() => {
-    window.addEventListener("keydown", handleKeyDown);
+    window.addEventListener('keydown', handleKeyDown);
 
     return () => {
-      window.removeEventListener("keydown", handleKeyDown);
+      window.removeEventListener('keydown', handleKeyDown);
     };
   });
 }

@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './EyesList.module.scss';
-import {eyesMap} from './eyesMap';
+import { eyesMap } from './eyesMap';
 
-export function EyesList({onEyesClick}) {
+export function EyesList({ onEyesClick }) {
   function handleClick(eyes) {
     onEyesClick(eyes);
   }
@@ -22,9 +22,5 @@ export function EyesList({onEyesClick}) {
     );
   }
 
-  return (
-    <ul className={styles.EyesList}>
-      {listMarkup}
-    </ul>
-  );
+  return <ul className={styles.EyesList}>{listMarkup}</ul>;
 }

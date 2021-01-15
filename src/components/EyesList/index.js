@@ -1,2 +1,2 @@
-export * from "./EyesList";
-export * from "./eyesMap";
+export * from './EyesList';
+export * from './eyesMap';

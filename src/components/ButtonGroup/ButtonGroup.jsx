@@ -1,8 +1,7 @@
-import React from "react";
-import styles from "./ButtonGroup.module.scss";
+import React from 'react';
+import styles from './ButtonGroup.module.scss';
 
-function ButtonGroup({buttons}) {
-
+function ButtonGroup({ buttons }) {
   const buttonsMarkup = buttons.map((button, index) => (
     <li key={index}>
       <button onClick={button.onClick}>{button.label}</button>
@@ -11,9 +10,7 @@ function ButtonGroup({buttons}) {
 
   return (
     <nav>
-      <ul className={styles.ButtonGroupList}>
-        {buttonsMarkup}
-      </ul>
+      <ul className={styles.ButtonGroupList}>{buttonsMarkup}</ul>
     </nav>
   );
 }
