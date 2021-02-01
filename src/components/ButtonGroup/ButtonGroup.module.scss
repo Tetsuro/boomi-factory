@@ -1,21 +1,38 @@
 @import '../../stylesheets/main';
 
 .ButtonGroupList {
+  @include reset-list;
   display: flex;
   justify-content: center;
-  list-style: none;
-  padding: 0 get-spacing();
-  margin: 0;
+  margin: get-spacing();
 
   > li {
     flex: 1 0 auto;
+
+    &:first-child {
+      margin-right: get-spacing();
+    }
   }
 
   button {
+    @include reset-button;
     width: 100%;
-    background: none;
-    border: 1px solid #ddd;
-    padding: get-spacing('half');
-    cursor: pointer;
+    border: 1px solid #bdbdbd;
+    padding: get-spacing();
+    border-radius: rem(24);
+    font-size: rem(20);
+
+    &:hover,
+    &:focus,
+    &.active {
+      border-color: get-color('blue');
+      box-shadow: 0 0 0 3px get-color('blue');
+      outline: none;
+    }
+
+    &:active {
+      border-color: get-color('pastel-blue');
+      box-shadow: 0 0 0 3px get-color('pastel-blue');
+    }
   }
 }
