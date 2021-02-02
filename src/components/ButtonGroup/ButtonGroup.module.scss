@@ -18,7 +18,7 @@
     @include reset-button;
     width: 100%;
     border: 1px solid #bdbdbd;
-    padding: get-spacing();
+    padding: get-spacing('half');
     border-radius: rem(24);
     font-size: rem(20);
 
