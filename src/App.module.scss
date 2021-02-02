@@ -1,12 +1,30 @@
 @import './stylesheets/main';
 
+$stripe-background-primary: #ffe7b2;
+$stripe-background-secondary: get-color('pastel-yellow');
 // body > div is to select the #root div.
 html,
 body,
 body > div {
   height: 100%;
   overflow: hidden;
-  background-color: get-color('pastel-yellow');
+  // Thanks to https://css-tricks.com/books/fundamental-css-tactics/striped-barberpole-animation/
+  // for this effect!
+  background-image: repeating-linear-gradient(
+    -45deg,
+    $stripe-background-primary,
+    $stripe-background-primary 1rem,
+    $stripe-background-secondary 1rem,
+    $stripe-background-secondary 2rem
+  );
+  background-size: 200% 200%;
+  animation: barberpole 60s linear infinite;
+}
+
+@keyframes barberpole {
+  100% {
+    background-position: 100% 100%;
+  }
 }
 
 .App {
