@@ -17,10 +17,12 @@
   button {
     @include reset-button;
     width: 100%;
-    border: 1px solid #bdbdbd;
+    border: 2px solid get-color('dark-blue');
+    color: get-color('dark-blue');
     padding: get-spacing('half');
     border-radius: rem(24);
     font-size: rem(20);
+    font-weight: bold;
 
     &:hover,
     &:focus,
