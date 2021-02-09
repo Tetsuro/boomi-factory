@@ -1,25 +1,29 @@
 @import '../../stylesheets/main';
 
+$radius: rem(24);
+
 .ButtonGroupList {
   @include reset-list;
   display: flex;
   justify-content: center;
-  margin: get-spacing();
 
   > li {
-    flex: 1 0 auto;
+    &:first-child button {
+      border-right: 0;
+      border-radius: $radius 0 0 $radius;
+    }
 
-    &:first-child {
-      margin-right: get-spacing();
+    &:last-child button {
+      border-radius: 0 $radius $radius 0;
     }
   }
 
   button {
     @include reset-button;
     width: 100%;
-    border: 2px solid get-color('dark-blue');
-    color: get-color('dark-blue');
-    padding: get-spacing('half');
+    border: 2px solid get-color('blue');
+    color: get-color('white');
+    padding: get-spacing('half') get-spacing();
     border-radius: rem(24);
     font-size: rem(20);
     font-weight: bold;
@@ -27,14 +31,15 @@
     &:hover,
     &:focus,
     &.active {
-      border-color: get-color('blue');
-      box-shadow: 0 0 0 3px get-color('blue');
-      outline: none;
+      // border-color: get-color('blue');
+      // box-shadow: 0 0 0 3px get-color('blue');
+      // outline: none;
+      background-color: rgba(get-color('blue'), 0.4);
     }
 
     &:active {
-      border-color: get-color('pastel-blue');
-      box-shadow: 0 0 0 3px get-color('pastel-blue');
+      // border-color: get-color('pastel-blue');
+      // box-shadow: 0 0 0 3px get-color('pastel-blue');
     }
   }
 }

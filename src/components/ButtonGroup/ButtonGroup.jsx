@@ -8,11 +8,7 @@ function ButtonGroup({ buttons }) {
     </li>
   ));
 
-  return (
-    <nav>
-      <ul className={styles.ButtonGroupList}>{buttonsMarkup}</ul>
-    </nav>
-  );
+  return <ul className={styles.ButtonGroupList}>{buttonsMarkup}</ul>;
 }
 
 export default ButtonGroup;
