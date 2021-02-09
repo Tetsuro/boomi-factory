@@ -8,8 +8,6 @@ $radius: rem(24);
   justify-content: center;
 
   > li {
-    flex: 1 1 auto;
-
     &:first-child button {
       border-right: 0;
       border-radius: $radius 0 0 $radius;

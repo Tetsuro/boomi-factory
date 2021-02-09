@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next';
 import ButtonGroup from './components/ButtonGroup';
 import Header from './components/Header';
 import Preview from './components/Preview';
-// import PrintButton from './components/PrintButton';
 import FooterMenu from './components/FooterMenu';
 import Sheet from './components/Sheet';
 import ColorsList from './components/ColorsList';
@@ -109,7 +108,6 @@ function App() {
           ]}
         />
       </FooterMenu>
-      {/* <PrintButton /> */}
       {customizeSheetMarkup}
       {designSheetMarkup}
       <Overlay
