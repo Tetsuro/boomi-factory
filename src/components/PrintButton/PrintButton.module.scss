@@ -12,7 +12,13 @@
   border-radius: rem(20);
   padding: get-spacing('half') get-spacing();
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: #ff9bb9;
+  }
+
+  &:active {
+    // background-color: #fa6f99;
+    transform: translateY(2px);
   }
 }

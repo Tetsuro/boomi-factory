@@ -8,6 +8,8 @@ $radius: rem(24);
   justify-content: center;
 
   > li {
+    flex: 1 1 auto;
+
     &:first-child button {
       border-right: 0;
       border-radius: $radius 0 0 $radius;
@@ -29,17 +31,12 @@ $radius: rem(24);
     font-weight: bold;
 
     &:hover,
-    &:focus,
-    &.active {
-      // border-color: get-color('blue');
-      // box-shadow: 0 0 0 3px get-color('blue');
-      // outline: none;
-      background-color: rgba(get-color('blue'), 0.4);
+    &:focus {
+      background-color: rgba(get-color('blue'), 0.6);
     }
 
     &:active {
-      // border-color: get-color('pastel-blue');
-      // box-shadow: 0 0 0 3px get-color('pastel-blue');
+      background-color: rgba(get-color('blue'), 0.4);
     }
   }
 }
