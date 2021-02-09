@@ -2,6 +2,7 @@
 
 $stripe-background-primary: #ffe7b2;
 $stripe-background-secondary: get-color('pastel-yellow');
+$stripe-background-width: 6px;
 // body > div is to select the #root div.
 html,
 body,
@@ -13,9 +14,9 @@ body > div {
   background-image: repeating-linear-gradient(
     -45deg,
     $stripe-background-primary,
-    $stripe-background-primary 1rem,
-    $stripe-background-secondary 1rem,
-    $stripe-background-secondary 2rem
+    $stripe-background-primary $stripe-background-width,
+    $stripe-background-secondary $stripe-background-width,
+    $stripe-background-secondary $stripe-background-width * 2
   );
   background-size: 200% 200%;
   animation: barberpole 60s linear infinite;

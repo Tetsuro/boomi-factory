@@ -1,0 +1,12 @@
+@import '../../stylesheets/main';
+
+$footer-nav-height: rem(80);
+
+.FooterMenu {
+  height: $footer-nav-height;
+  padding: get-spacing('half');
+  background-color: get-color('dark-blue');
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

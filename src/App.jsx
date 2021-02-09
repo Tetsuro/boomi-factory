@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import ButtonGroup from './components/ButtonGroup';
 import Header from './components/Header';
 import Preview from './components/Preview';
-import PrintButton from './components/PrintButton';
+import FooterMenu from './components/FooterMenu';
 import Sheet from './components/Sheet';
 import ColorsList from './components/ColorsList';
 import MobileMenu from './components/MobileMenu';
@@ -93,20 +93,21 @@ function App() {
         activeEyes={activeEyes}
         minimized={sheetIsOpen}
       />
-      <ButtonGroup
-        buttons={[
-          {
-            onClick: handleCustomizeClick,
-            label: t('customize.select_colors'),
-          },
-          {
-            onClick: handleDesignClick,
-            label: t('customize.select_eyes'),
-          },
-        ]}
-      />
       <MobileMenu open={mobileMenuIsOpen} />
-      <PrintButton />
+      <FooterMenu>
+        <ButtonGroup
+          buttons={[
+            {
+              onClick: handleCustomizeClick,
+              label: t('customize.select_colors'),
+            },
+            {
+              onClick: handleDesignClick,
+              label: t('customize.select_eyes'),
+            },
+          ]}
+        />
+      </FooterMenu>
       {customizeSheetMarkup}
       {designSheetMarkup}
       <Overlay
