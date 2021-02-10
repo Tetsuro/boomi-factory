@@ -6,8 +6,12 @@ $radius: rem(24);
   @include reset-list;
   display: flex;
   justify-content: center;
+  width: 100%;
+  margin-bottom: get-spacing('half');
 
   > li {
+    flex: 1 1 auto;
+
     &:first-child button {
       border-right: 0;
       border-radius: $radius 0 0 $radius;

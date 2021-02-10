@@ -1,6 +1,6 @@
 @import '../../stylesheets/main';
 
-$footer-nav-height: rem(80);
+$footer-nav-height: rem(200);
 
 .FooterMenu {
   height: $footer-nav-height;
@@ -8,5 +8,6 @@ $footer-nav-height: rem(80);
   background-color: get-color('dark-blue');
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  flex-direction: column;
 }

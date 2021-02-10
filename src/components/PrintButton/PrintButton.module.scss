@@ -11,6 +11,7 @@
   cursor: pointer;
   border-radius: rem(20);
   padding: get-spacing('half') get-spacing();
+  width: 100%;
 
   &:hover,
   &:focus {
