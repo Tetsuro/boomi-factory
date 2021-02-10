@@ -2,15 +2,14 @@
 
 .PrintButton {
   display: inline-block;
-  // height: $print-button-height;
   background: #ff6392;
   color: get-color('white');
   border: 0;
   font-size: rem(20);
   font-weight: bold;
   cursor: pointer;
-  border-radius: rem(20);
   padding: get-spacing('half') get-spacing();
+  width: 100%;
 
   &:hover,
   &:focus {
@@ -18,6 +17,6 @@
   }
 
   &:active {
-    transform: translateY(2px);
+    background-color: #f41357;
   }
 }
