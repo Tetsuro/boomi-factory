@@ -1,13 +1,1 @@
 @import '../../stylesheets/main';
-
-$footer-nav-height: rem(200);
-
-.FooterMenu {
-  height: $footer-nav-height;
-  padding: get-spacing('half');
-  background-color: get-color('dark-blue');
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
