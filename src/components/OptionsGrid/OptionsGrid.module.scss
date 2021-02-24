@@ -1,0 +1,18 @@
+@import '../../stylesheets/main';
+
+.OptionsGrid {
+  @include reset-list();
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-column-gap: get-spacing();
+}
+
+.Thumbnail {
+  height: rem(30);
+  border-bottom: 1px solid #d7d7d7;
+}
+
+.Button {
+  @include reset-button;
+  @include list-buttons;
+}
