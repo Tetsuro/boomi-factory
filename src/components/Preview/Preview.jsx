@@ -7,7 +7,7 @@ import { classNames } from '../../utilities/classNames';
 function Preview({ activeColor, activeEyes, minimized }) {
   const { primary, secondary } = activeColor;
 
-  const SelectedEyes = eyesMap[activeEyes];
+  const SelectedEyes = activeEyes;
 
   const primaryStyles = {
     fill: primary,
