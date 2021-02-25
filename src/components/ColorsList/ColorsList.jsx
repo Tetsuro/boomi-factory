@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './ColorsList.module.scss';
 import { colors } from '../../data/colors.json';
-import { classNames } from '../../utilities/classNames';
 import OptionsGrid from '../OptionsGrid';
 
 function ColorsList({ activeColor, onSwatchClick }) {
@@ -12,10 +11,6 @@ function ColorsList({ activeColor, onSwatchClick }) {
   // TODO: Better key for li?
   const options = colors.map((color, index) => {
     const isActive = color === activeColor;
-    const buttonClassNames = classNames(
-      styles.Button,
-      isActive && styles.active
-    );
 
     const thumbnailMarkup = (
       <div className={styles.ColorsThumbnail}>
@@ -33,6 +28,7 @@ function ColorsList({ activeColor, onSwatchClick }) {
     return {
       title: color.name,
       thumbnail: thumbnailMarkup,
+      active: isActive,
       onClick: () => handleClick(color),
     };
   });

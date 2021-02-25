@@ -3,12 +3,12 @@ import { eyesArray } from './eyesMap';
 import OptionsGrid from '../OptionsGrid';
 import styles from './EyesList.module.scss';
 
-// TODO: Do I even need this component or can I just use OptionsGrid?
-
-export function EyesList({ onEyesClick }) {
-  function handleClick(eye) {
-    onEyesClick(eye.svg);
+export function EyesList({ activeEyes, onEyesClick }) {
+  function handleClick(eyeName) {
+    onEyesClick(eyeName);
   }
+
+  const activeEyesName = eyesArray.find((eye) => eye.name === activeEyes).name;
 
   const options = eyesArray.map((eye) => {
     const thumbnailMarkup = (
@@ -20,7 +20,8 @@ export function EyesList({ onEyesClick }) {
     return {
       title: eye.name,
       thumbnail: thumbnailMarkup,
-      onClick: () => handleClick(eye),
+      active: eye.name === activeEyesName,
+      onClick: () => handleClick(eye.name),
     };
   });
 
