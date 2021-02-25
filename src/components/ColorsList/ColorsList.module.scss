@@ -1,23 +1,11 @@
 @import '../../stylesheets/main';
 
-.ColorsList {
-  @include reset-list;
-}
-
-.Button {
-  @include list-buttons;
-}
-
-.SwatchWrapper {
+.ColorsThumbnail {
   display: flex;
-  height: rem(25);
+  height: rem(30);
 }
 
 .Swatch {
   display: inline-block;
   width: 100%;
-}
-
-.Label {
-  padding: get-spacing('quarter');
 }
