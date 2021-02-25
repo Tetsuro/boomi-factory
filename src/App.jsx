@@ -21,7 +21,7 @@ function App() {
   const [customizeSheetIsOpen, setCustomizeSheetIsOpen] = useState(false);
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
   const [activeColor, setActiveColor] = useState(colors[0]);
-  const [activeEyes, setActiveEyes] = useState('original');
+  const [activeEyes, setActiveEyes] = useState('Original');
 
   const { t } = useTranslation();
 
@@ -54,7 +54,7 @@ function App() {
       onClose={handleSheetClose}
       isOpen={designSheetIsOpen}
     >
-      <EyesList onEyesClick={handleEyesClick} />
+      <EyesList activeEyes={activeEyes} onEyesClick={handleEyesClick} />
     </Sheet>
   );
 

@@ -1,43 +1,11 @@
 @import '../../stylesheets/main';
 
-.ColorsList {
-  // TODO: Make a reset-list helper.
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.Button {
-  @include reset-button;
-  width: 100%;
-  margin-bottom: get-spacing();
-  border-radius: rem(10);
-  overflow: hidden;
-  border: 1px solid #ddd;
-
-  &:hover,
-  &:focus,
-  &.active {
-    border-color: get-color('blue');
-    box-shadow: 0 0 0 3px get-color('blue');
-  }
-
-  &:active {
-    border-color: get-color('pastel-blue');
-    box-shadow: 0 0 0 3px get-color('pastel-blue');
-  }
-}
-
-.SwatchWrapper {
+.ColorsThumbnail {
   display: flex;
+  height: rem(30);
 }
 
 .Swatch {
   display: inline-block;
   width: 100%;
-  height: rem(20);
-}
-
-.Label {
-  padding: get-spacing('quarter');
 }

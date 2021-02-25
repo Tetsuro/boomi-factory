@@ -1,26 +1,29 @@
 import React from 'react';
+import { eyesArray } from './eyesMap';
+import OptionsGrid from '../OptionsGrid';
 import styles from './EyesList.module.scss';
-import { eyesMap } from './eyesMap';
 
-export function EyesList({ onEyesClick }) {
-  function handleClick(eyes) {
-    onEyesClick(eyes);
+export function EyesList({ activeEyes, onEyesClick }) {
+  function handleClick(eyeName) {
+    onEyesClick(eyeName);
   }
 
-  const listMarkup = [];
+  const activeEyesName = eyesArray.find((eye) => eye.name === activeEyes).name;
 
-  for (const property in eyesMap) {
-    // TODO: Make smaller SVGs for eyes preview.
-    // const EyeComponent = eyesMap[property];
-    // TODO: render <EyeComponent /> instead of {property}
-    listMarkup.push(
-      <li key={property}>
-        <button onClick={() => handleClick(property)} className={styles.Button}>
-          {property}
-        </button>
-      </li>
+  const options = eyesArray.map((eye) => {
+    const thumbnailMarkup = (
+      <div className={styles.EyeThumbnail}>
+        <eye.previewSvg />
+      </div>
     );
-  }
 
-  return <ul className={styles.EyesList}>{listMarkup}</ul>;
+    return {
+      title: eye.name,
+      thumbnail: thumbnailMarkup,
+      active: eye.name === activeEyesName,
+      onClick: () => handleClick(eye.name),
+    };
+  });
+
+  return <OptionsGrid options={options} />;
 }

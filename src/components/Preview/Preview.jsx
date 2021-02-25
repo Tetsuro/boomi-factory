@@ -1,13 +1,13 @@
 import React from 'react';
 import styles from './Preview.module.scss';
 import { ReactComponent as Boomi } from './svg/boomi.svg';
-import { eyesMap } from '../EyesList';
+import { eyesArray } from '../EyesList';
 import { classNames } from '../../utilities/classNames';
 
 function Preview({ activeColor, activeEyes, minimized }) {
   const { primary, secondary } = activeColor;
 
-  const SelectedEyes = eyesMap[activeEyes];
+  const SelectedEyesSVG = eyesArray.find((eye) => eye.name === activeEyes).svg;
 
   const primaryStyles = {
     fill: primary,
@@ -57,7 +57,7 @@ function Preview({ activeColor, activeEyes, minimized }) {
           style={primaryStyles}
         ></polygon>
       </g>
-      <SelectedEyes />
+      <SelectedEyesSVG />
     </svg>
   );
 
