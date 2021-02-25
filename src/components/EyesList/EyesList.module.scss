@@ -1,9 +1,6 @@
 @import '../../stylesheets/main';
 
-.EyesList {
-  @include reset-list;
-}
-
-.Button {
-  @include list-buttons;
+.EyeThumbnail {
+  max-width: rem(100);
+  margin: get-spacing('half') auto;
 }

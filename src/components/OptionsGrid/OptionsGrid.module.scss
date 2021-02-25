@@ -8,11 +8,14 @@
 }
 
 .Thumbnail {
-  height: rem(30);
   border-bottom: 1px solid #d7d7d7;
 }
 
 .Button {
   @include reset-button;
   @include list-buttons;
+}
+
+.Title {
+  padding: get-spacing('half');
 }

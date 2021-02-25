@@ -10,7 +10,7 @@ export function EyesList({ onEyesClick }) {
     onEyesClick(eye.svg);
   }
 
-  const options = eyesArray.map((eye, index) => {
+  const options = eyesArray.map((eye) => {
     const thumbnailMarkup = (
       <div className={styles.EyeThumbnail}>
         <eye.previewSvg />
