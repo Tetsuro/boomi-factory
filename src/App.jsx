@@ -94,7 +94,7 @@ function App() {
         minimized={sheetIsOpen}
       />
       <MobileMenu open={mobileMenuIsOpen} />
-      <FooterMenu>
+      <FooterMenu show={!sheetIsOpen}>
         <ButtonGroup
           buttons={[
             {
