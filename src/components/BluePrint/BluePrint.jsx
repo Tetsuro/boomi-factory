@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './BluePrint.module.scss';
-// import { ReactComponent as Boomi } from './svg/boomi.svg';
+import { ReactComponent as BluePrintSVG } from './svg/blueprint.svg';
 import { eyesArray } from '../EyesList';
 
 function BluePrint({ activeColor, activeEyes, minimized }) {
@@ -16,7 +16,11 @@ function BluePrint({ activeColor, activeEyes, minimized }) {
   //   fill: secondary,
   // };
 
-  return <div className={styles.BluePrint}>Hello</div>;
+  return (
+    <div className={styles.BluePrint}>
+      <BluePrintSVG />
+    </div>
+  );
 }
 
 export default BluePrint;
