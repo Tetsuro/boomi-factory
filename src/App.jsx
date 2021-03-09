@@ -118,7 +118,7 @@ function App() {
           onClick={closeOverlays}
         />
       </div>
-      <BluePrint />
+      <BluePrint activeColor={activeColor} />
     </>
   );
 }
