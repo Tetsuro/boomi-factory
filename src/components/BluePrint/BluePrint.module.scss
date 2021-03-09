@@ -1,0 +1,26 @@
+@import '../../stylesheets/main';
+
+.BluePrint {
+  display: none;
+  position: relative;
+
+  > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+@media print {
+  .BluePrint {
+    display: block;
+    // svg {
+    //   display: none;
+    // }
+  }
+
+  @page {
+    size: letter landscape;
+    margin: 0;
+  }
+}

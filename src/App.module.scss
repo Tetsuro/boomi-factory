@@ -34,3 +34,9 @@ body > div {
   height: 100%;
   overflow: hidden;
 }
+
+@media print {
+  .App {
+    display: none;
+  }
+}

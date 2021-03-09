@@ -9,6 +9,7 @@ import Sheet from './components/Sheet';
 import ColorsList from './components/ColorsList';
 import MobileMenu from './components/MobileMenu';
 import Overlay from './components/Overlay';
+import BluePrint from './components/BluePrint';
 import { EyesList } from './components/EyesList';
 import { colors } from './data/colors.json';
 
@@ -83,39 +84,42 @@ function App() {
   useKeyPress(27, closeOverlays);
 
   return (
-    <div className={styles.App}>
-      <Header
-        show={!sheetIsOpen}
-        onMobileMenuActivatorClick={handleMobileMenuActivatorClick}
-      />
-      <Preview
-        activeColor={activeColor}
-        activeEyes={activeEyes}
-        minimized={sheetIsOpen}
-      />
-      <MobileMenu open={mobileMenuIsOpen} />
-      <FooterMenu show={!sheetIsOpen}>
-        <ButtonGroup
-          buttons={[
-            {
-              onClick: handleCustomizeClick,
-              label: t('customize.select_colors'),
-            },
-            {
-              onClick: handleDesignClick,
-              label: t('customize.select_eyes'),
-            },
-          ]}
+    <>
+      <div className={styles.App}>
+        <Header
+          show={!sheetIsOpen}
+          onMobileMenuActivatorClick={handleMobileMenuActivatorClick}
         />
-      </FooterMenu>
-      {customizeSheetMarkup}
-      {designSheetMarkup}
-      <Overlay
-        isOpen={overlayIsOpen}
-        transparent={sheetIsOpen}
-        onClick={closeOverlays}
-      />
-    </div>
+        <Preview
+          activeColor={activeColor}
+          activeEyes={activeEyes}
+          minimized={sheetIsOpen}
+        />
+        <MobileMenu open={mobileMenuIsOpen} />
+        <FooterMenu show={!sheetIsOpen}>
+          <ButtonGroup
+            buttons={[
+              {
+                onClick: handleCustomizeClick,
+                label: t('customize.select_colors'),
+              },
+              {
+                onClick: handleDesignClick,
+                label: t('customize.select_eyes'),
+              },
+            ]}
+          />
+        </FooterMenu>
+        {customizeSheetMarkup}
+        {designSheetMarkup}
+        <Overlay
+          isOpen={overlayIsOpen}
+          transparent={sheetIsOpen}
+          onClick={closeOverlays}
+        />
+      </div>
+      <BluePrint activeColor={activeColor} />
+    </>
   );
 }
 
