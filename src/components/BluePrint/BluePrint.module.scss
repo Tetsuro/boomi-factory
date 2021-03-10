@@ -1,7 +1,7 @@
 @import '../../stylesheets/main';
 
 .BluePrint {
-  display: block;
+  display: none;
 
   > svg {
     position: fixed;
@@ -11,6 +11,7 @@
     width: 11in;
     height: 8.5in;
     transform-origin: top left;
+    background: red;
   }
 }
 
