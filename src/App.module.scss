@@ -33,10 +33,17 @@ body > div {
   flex-direction: column;
   height: 100%;
   overflow: hidden;
+  display: none;
 }
 
 @media print {
   .App {
     display: none;
+  }
+
+  html,
+  body,
+  body > div {
+    background-image: none;
   }
 }

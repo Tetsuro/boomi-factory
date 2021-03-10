@@ -1,26 +1,26 @@
 @import '../../stylesheets/main';
 
 .BluePrint {
-  display: none;
-  position: relative;
+  display: block;
 
-  > * {
-    position: absolute;
+  > svg {
+    position: fixed;
     top: 0;
     left: 0;
+    transform: rotate(-90deg) translateX(-100%);
+    width: 11in;
+    height: 8.5in;
+    transform-origin: top left;
   }
 }
 
 @media print {
   .BluePrint {
     display: block;
-    // svg {
-    //   display: none;
-    // }
   }
 
   @page {
-    size: letter landscape;
     margin: 0;
+    background-image: none;
   }
 }
