@@ -5,11 +5,9 @@
 
   > svg {
     position: fixed;
-    top: 0;
-    left: 0;
     transform: rotate(-90deg) translateX(-100%);
-    width: 11in;
-    height: 8.5in;
+    width: calc(11in);
+    height: calc(8.5in);
     transform-origin: top left;
   }
 }
