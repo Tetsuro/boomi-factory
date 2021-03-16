@@ -3,10 +3,11 @@ import styles from './BluePrint.module.scss';
 import { ReactComponent as BluePrintSVG } from './svg/blueprint.svg';
 import { eyesArray } from '../EyesList';
 
-function BluePrint({ activeColor, activeEyes, minimized }) {
+function BluePrint({ activeColor, activeEyes }) {
   const { primary, secondary } = activeColor;
 
-  // const SelectedEyesSVG = eyesArray.find((eye) => eye.name === activeEyes).svg;
+  const SelectedEyesSVG = eyesArray.find((eye) => eye.name === activeEyes)
+    .blueprintSvg;
 
   const primaryStyles = {
     fill: primary,
@@ -148,6 +149,7 @@ function BluePrint({ activeColor, activeEyes, minimized }) {
   return (
     <div className={styles.BluePrint}>
       {fillsMarkup}
+      <SelectedEyesSVG />
       <BluePrintSVG />
     </div>
   );
