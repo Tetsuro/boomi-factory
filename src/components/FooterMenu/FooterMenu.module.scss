@@ -2,6 +2,7 @@
 
 .FooterMenu {
   opacity: 0;
+  padding: get-spacing();
 
   &.visible {
     opacity: 1;

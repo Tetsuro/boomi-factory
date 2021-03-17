@@ -1,0 +1,38 @@
+@import '../../stylesheets/main';
+
+$radius: rem(15);
+$offset-height: rem(6);
+
+.Button {
+  @include reset-button;
+  width: 100%;
+  color: get-color('white');
+  padding: get-spacing('half') get-spacing();
+  background-color: get-color('dark-blue');
+  font-size: rem(20);
+  font-weight: bold;
+  border-radius: $radius;
+  position: relative;
+  box-shadow: 0px $offset-height 0px 0px #3463af;
+
+  &.primary {
+    background-color: #ff6392;
+    box-shadow: 0px $offset-height 0px 0px #ff3975;
+    font-size: rem(24);
+
+    &:hover,
+    &:focus {
+      background-color: #ff86ab;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #45bbf8;
+  }
+
+  &:active {
+    box-shadow: none;
+    transform: translateY($offset-height);
+  }
+}
