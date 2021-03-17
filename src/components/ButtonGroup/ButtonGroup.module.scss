@@ -7,10 +7,10 @@ $radius: rem(24);
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-bottom: get-spacing('half');
+  margin-bottom: get-spacing();
 
   > li {
-    flex: 1 1 auto;
+    flex: 1 1 50%;
 
     &:first-child {
       margin-right: get-spacing('half');
