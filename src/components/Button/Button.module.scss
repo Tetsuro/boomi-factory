@@ -1,0 +1,37 @@
+@import '../../stylesheets/main';
+
+$radius: rem(24);
+
+$offset-height: 5px;
+
+.Button {
+  @include reset-button;
+  width: 100%;
+  color: get-color('white');
+  padding: get-spacing('half') get-spacing();
+  background-color: get-color('dark-blue');
+  font-size: rem(20);
+  font-weight: bold;
+  border-radius: rem(15);
+  border-bottom: $offset-height solid #3463af;
+
+  &.primary {
+    background-color: #ff6392;
+    border-bottom: $offset-height solid #ff3975;
+
+    &:hover {
+      background-color: #ff86ab;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #45bbf8;
+  }
+
+  &:active {
+    border-bottom: 0;
+    margin-bottom: $offset-height;
+    transform: translateY($offset-height);
+  }
+}

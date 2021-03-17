@@ -7,32 +7,13 @@ $radius: rem(24);
   display: flex;
   justify-content: center;
   width: 100%;
+  margin-bottom: get-spacing('half');
 
   > li {
     flex: 1 1 auto;
 
-    &:first-child button {
-      border-right: 0;
-      border-right: 1px solid #8bc9ff;
-    }
-  }
-
-  button {
-    @include reset-button;
-    width: 100%;
-    color: get-color('white');
-    padding: get-spacing('half') get-spacing();
-    background-color: get-color('dark-blue');
-    font-size: rem(20);
-    font-weight: bold;
-
-    &:hover,
-    &:focus {
-      background-color: #45bbf8;
-    }
-
-    &:active {
-      background-color: #1677c9;
+    &:first-child {
+      margin-right: get-spacing('half');
     }
   }
 }
