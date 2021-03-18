@@ -12,12 +12,12 @@ $header-height: rem(64);
   justify-content: center;
   transition: transform 100ms;
   transform: translateY(0%);
+  background-color: #1e96fc;
 
   h1 {
     margin: 0;
-    font-size: rem(36);
-    // TODO: Use color helper
-    color: #1e96fc;
+    font-size: rem(30);
+    color: get-color('white');
   }
 }
 
@@ -31,7 +31,7 @@ $header-height: rem(64);
 
 .MobileMenuActivator {
   position: absolute;
-  top: get-spacing('half');
+  top: rem(12);
   right: get-spacing('half');
   padding: get-spacing('half');
   background: none;
@@ -41,12 +41,9 @@ $header-height: rem(64);
   border-radius: calc(#{$hamburger-size} / 2);
   cursor: pointer;
 
-  &:hover {
-    background-color: #1e96fc;
-
-    svg {
-      fill: get-color('white');
-    }
+  &:hover,
+  &:focus {
+    background-color: #45bbf8;
   }
 
   span {
@@ -56,6 +53,15 @@ $header-height: rem(64);
   svg {
     height: rem(24);
     width: rem(24);
-    fill: #1e96fc;
+    fill: get-color('white');
+  }
+}
+
+.Logo {
+  width: rem(35);
+  margin-right: get-spacing();
+
+  svg {
+    fill: #fff;
   }
 }
