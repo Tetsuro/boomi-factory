@@ -2,6 +2,7 @@ import React from 'react';
 import { CSSTransition } from 'react-transition-group';
 import styles from './Header.module.scss';
 import { ReactComponent as HamburgerIcon } from './icons/menu.svg';
+import { ReactComponent as Logo } from './icons/logo.svg';
 import { classNames } from '../../utilities/classNames';
 
 function Header({ show = true, onMobileMenuActivatorClick }) {
@@ -27,7 +28,10 @@ function Header({ show = true, onMobileMenuActivatorClick }) {
       unmountOnExit
     >
       <div>
-        <h1>Boomi</h1>
+        {/* <div className={styles.Logo}>
+          <Logo />
+        </div> */}
+        <h1>build-a-boomi</h1>
         <button className={styles.MobileMenuActivator} onClick={handleClick}>
           <HamburgerIcon />
           <span>Open menu</span>
