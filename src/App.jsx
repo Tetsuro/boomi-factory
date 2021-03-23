@@ -7,6 +7,7 @@ import Preview from './components/Preview';
 import FooterMenu from './components/FooterMenu';
 import Sheet from './components/Sheet';
 import ColorsList from './components/ColorsList';
+import DesktopMenu from './components/DesktopMenu';
 import MobileMenu from './components/MobileMenu';
 import Overlay from './components/Overlay';
 import BluePrint from './components/BluePrint';
@@ -84,12 +85,13 @@ function App() {
   useKeyPress(27, closeOverlays);
 
   return (
-    <>
-      <div className={styles.App}>
-        <Header
-          show={!sheetIsOpen}
-          onMobileMenuActivatorClick={handleMobileMenuActivatorClick}
-        />
+    <div className={styles.App}>
+      <Header
+        show={!sheetIsOpen}
+        onMobileMenuActivatorClick={handleMobileMenuActivatorClick}
+      />
+      <div className={styles.Body}>
+        <DesktopMenu />
         <Preview
           activeColor={activeColor}
           activeEyes={activeEyes}
@@ -119,7 +121,7 @@ function App() {
         />
       </div>
       <BluePrint activeColor={activeColor} activeEyes={activeEyes} />
-    </>
+    </div>
   );
 }
 

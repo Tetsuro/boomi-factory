@@ -17,6 +17,10 @@
     top: 0;
     left: 0;
   }
+
+  @include tablet-and-up {
+    width: 100%;
+  }
 }
 
 .minimized {

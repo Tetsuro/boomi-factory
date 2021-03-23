@@ -29,14 +29,23 @@ body > div {
 }
 
 .App {
+  height: 100%;
+}
+
+.Body {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  // TODO: Use header-height variable
+  height: calc(100% - #{rem(64)});
   overflow: hidden;
+
+  @include tablet-and-up {
+    flex-direction: row;
+  }
 }
 
 @media print {
-  .App {
+  .Body {
     display: none;
   }
 
