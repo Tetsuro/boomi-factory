@@ -5,7 +5,7 @@ import { classNames } from '../../utilities/classNames';
 
 // import { ReactComponent as CloseIcon } from '../../icons/close.svg';
 
-function DesktopMenu({ isOpen = false, children, title, onClose }) {
+function DesktopMenu({ tabs, children }) {
   // const transitionClassNames = {
   //   enter: classNames(styles.Sheet, styles['Sheet-enter']),
   //   enterActive: classNames(styles.Sheet, styles['Sheet-enter-active']),
@@ -14,7 +14,7 @@ function DesktopMenu({ isOpen = false, children, title, onClose }) {
   //   exitDone: classNames(styles.Sheet, styles['Sheet-exit-done']),
   // };
 
-  return <p className={styles.DesktopMenu}>menu</p>;
+  return <div className={styles.DesktopMenu}>{children}</div>;
 }
 
 export default DesktopMenu;

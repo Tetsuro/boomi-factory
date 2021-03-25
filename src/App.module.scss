@@ -41,6 +41,7 @@ body > div {
 
   @include tablet-and-up {
     flex-direction: row;
+    align-items: center;
   }
 }
 

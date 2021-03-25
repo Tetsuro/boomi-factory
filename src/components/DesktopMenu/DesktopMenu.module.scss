@@ -4,6 +4,10 @@
   display: none;
   background-color: get-color('white');
   width: 100%;
+  // TODO: Use header-height variable
+  height: calc(100% - 4rem);
+  margin: get-spacing('double');
+  border-radius: rem(20);
 
   @include tablet-and-up {
     display: block;

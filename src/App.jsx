@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import Button from './components/Button';
 import ButtonGroup from './components/ButtonGroup';
 import Header from './components/Header';
 import Preview from './components/Preview';
@@ -91,12 +92,12 @@ function App() {
         onMobileMenuActivatorClick={handleMobileMenuActivatorClick}
       />
       <div className={styles.Body}>
-        <DesktopMenu />
         <Preview
           activeColor={activeColor}
           activeEyes={activeEyes}
           minimized={sheetIsOpen}
         />
+        <DesktopMenu tabs={[]}></DesktopMenu>
         <MobileMenu open={mobileMenuIsOpen} />
         <FooterMenu show={!sheetIsOpen}>
           <ButtonGroup
