@@ -25,6 +25,7 @@ function App() {
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
   const [activeColor, setActiveColor] = useState(colors[0]);
   const [activeEyes, setActiveEyes] = useState('Original');
+  const [activeTab, setActiveTab] = useState(0);
 
   const { t } = useTranslation();
 
@@ -39,6 +40,10 @@ function App() {
 
   const handleEyesClick = (eyes) => {
     setActiveEyes(eyes);
+  };
+
+  const handleTabClick = (index) => {
+    setActiveTab(index);
   };
 
   const customizeSheetMarkup = (
@@ -97,7 +102,25 @@ function App() {
           activeEyes={activeEyes}
           minimized={sheetIsOpen}
         />
-        <DesktopMenu tabs={[]}></DesktopMenu>
+        <DesktopMenu
+          activeTab={activeTab}
+          onTabClick={handleTabClick}
+          tabs={[
+            {
+              label: t('customize.select_colors'),
+            },
+            {
+              label: t('customize.select_eyes'),
+            },
+          ]}
+        >
+          <ColorsList
+            activeColor={activeColor}
+            onSwatchClick={handleSwatchClick}
+          />
+          <EyesList activeEyes={activeEyes} onEyesClick={handleEyesClick} />
+          <Button primary>Print</Button>
+        </DesktopMenu>
         <MobileMenu open={mobileMenuIsOpen} />
         <FooterMenu show={!sheetIsOpen}>
           <ButtonGroup

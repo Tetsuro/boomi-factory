@@ -2,14 +2,48 @@
 
 .DesktopMenu {
   display: none;
-  background-color: get-color('white');
   width: 100%;
   // TODO: Use header-height variable
   height: calc(100% - 4rem);
   margin: get-spacing('double');
-  border-radius: rem(20);
 
   @include tablet-and-up {
     display: block;
+  }
+}
+
+.Body {
+  background-color: get-color('white');
+  padding: get-spacing();
+  border-radius: 0 0 rem(20) rem(20);
+  border: 1px solid #ddd;
+  border-top: none;
+}
+
+.Tab {
+  @include reset-button;
+  background-color: #f1f1f1;
+
+  width: 50%;
+  padding: get-spacing();
+  border: 1px solid #ddd;
+  border-bottom: none;
+  box-shadow: 0 1px 0 0 #ddd;
+
+  &.active {
+    background-color: get-color('white');
+    box-shadow: none;
+  }
+
+  &:first-child {
+    border-bottom: none;
+    border-right: none;
+    border-radius: rem(20) 0 0 0;
+  }
+
+  &:last-child {
+    border-bottom: none;
+
+    border-radius: 0 rem(20) 0 0;
   }
 }
