@@ -90,6 +90,10 @@ function App() {
 
   useKeyPress(27, closeOverlays);
 
+  function print() {
+    window.print();
+  }
+
   return (
     <div className={styles.App}>
       <Header
@@ -104,7 +108,6 @@ function App() {
         />
         <DesktopMenu
           activeTab={activeTab}
-          onTabClick={handleTabClick}
           tabs={[
             {
               label: t('customize.select_colors'),
@@ -125,6 +128,11 @@ function App() {
               ),
             },
           ]}
+          footerAction={{
+            label: t('print'),
+            onClick: print,
+          }}
+          onTabClick={handleTabClick}
         />
         <MobileMenu open={mobileMenuIsOpen} />
         <FooterMenu show={!sheetIsOpen}>

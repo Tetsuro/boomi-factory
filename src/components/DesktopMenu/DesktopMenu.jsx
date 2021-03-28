@@ -3,7 +3,7 @@ import styles from './DesktopMenu.module.scss';
 import { classNames } from '../../utilities/classNames';
 import Button from '../Button';
 
-function DesktopMenu({ tabs, activeTab, onTabClick }) {
+function DesktopMenu({ tabs, activeTab, footerAction, onTabClick }) {
   const tabsMarkup = tabs.map((tab, index) => {
     const tabClasses = classNames(
       styles.Tab,
@@ -22,7 +22,9 @@ function DesktopMenu({ tabs, activeTab, onTabClick }) {
       <div className={styles.Tabs}>{tabsMarkup}</div>
       <div className={styles.Body}>{tabs[activeTab].content}</div>
       <div className={styles.Footer}>
-        <Button primary>Print</Button>
+        <Button primary onClick={footerAction.onClick}>
+          {footerAction.label}
+        </Button>
       </div>
     </div>
   );
