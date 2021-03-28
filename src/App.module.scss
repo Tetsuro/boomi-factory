@@ -3,6 +3,9 @@
 $stripe-background-primary: #ffe7b2;
 $stripe-background-secondary: get-color('pastel-yellow');
 $stripe-background-width: 6px;
+
+$layout-max-width: rem(1300);
+
 // body > div is to select the #root div.
 html,
 body,
@@ -42,6 +45,8 @@ body > div {
   @include tablet-and-up {
     flex-direction: row;
     align-items: center;
+    max-width: $layout-max-width;
+    margin: 0 auto;
   }
 }
 
