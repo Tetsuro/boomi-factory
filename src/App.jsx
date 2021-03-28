@@ -108,19 +108,24 @@ function App() {
           tabs={[
             {
               label: t('customize.select_colors'),
+              content: (
+                <ColorsList
+                  activeColor={activeColor}
+                  onSwatchClick={handleSwatchClick}
+                />
+              ),
             },
             {
               label: t('customize.select_eyes'),
+              content: (
+                <EyesList
+                  activeEyes={activeEyes}
+                  onEyesClick={handleEyesClick}
+                />
+              ),
             },
           ]}
-        >
-          <ColorsList
-            activeColor={activeColor}
-            onSwatchClick={handleSwatchClick}
-          />
-          <EyesList activeEyes={activeEyes} onEyesClick={handleEyesClick} />
-          <Button primary>Print</Button>
-        </DesktopMenu>
+        />
         <MobileMenu open={mobileMenuIsOpen} />
         <FooterMenu show={!sheetIsOpen}>
           <ButtonGroup
