@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import Button from './components/Button';
 import ButtonGroup from './components/ButtonGroup';
 import Header from './components/Header';
 import Preview from './components/Preview';
