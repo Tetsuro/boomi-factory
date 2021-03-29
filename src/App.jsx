@@ -46,23 +46,31 @@ function App() {
     setActiveTab(index);
   };
 
-  const customizeSheetMarkup = (
+  const colorsListMarkup = (
+    <ColorsList activeColor={activeColor} onSwatchClick={handleSwatchClick} />
+  );
+
+  const colorSheetMarkup = (
     <Sheet
       title={t('customize.select_colors')}
       onClose={handleSheetClose}
       isOpen={customizeSheetIsOpen}
     >
-      <ColorsList activeColor={activeColor} onSwatchClick={handleSwatchClick} />
+      {colorsListMarkup}
     </Sheet>
   );
 
-  const designSheetMarkup = (
+  const eyesListMarkup = (
+    <EyesList activeEyes={activeEyes} onEyesClick={handleEyesClick} />
+  );
+
+  const eyeSheetMarkup = (
     <Sheet
       title={t('customize.select_eyes')}
       onClose={handleSheetClose}
       isOpen={designSheetIsOpen}
     >
-      <EyesList activeEyes={activeEyes} onEyesClick={handleEyesClick} />
+      {eyesListMarkup}
     </Sheet>
   );
 
@@ -111,21 +119,11 @@ function App() {
           tabs={[
             {
               label: t('customize.select_colors'),
-              content: (
-                <ColorsList
-                  activeColor={activeColor}
-                  onSwatchClick={handleSwatchClick}
-                />
-              ),
+              content: colorsListMarkup,
             },
             {
               label: t('customize.select_eyes'),
-              content: (
-                <EyesList
-                  activeEyes={activeEyes}
-                  onEyesClick={handleEyesClick}
-                />
-              ),
+              content: eyesListMarkup,
             },
           ]}
           footerAction={{
@@ -135,7 +133,7 @@ function App() {
           onTabClick={handleTabClick}
         />
         <MobileMenu open={mobileMenuIsOpen} />
-        <FooterMenu show={!sheetIsOpen}>
+        <FooterMenu show={!sheetIsOpen} label={t('print')} onClick={print}>
           <ButtonGroup
             buttons={[
               {
@@ -149,8 +147,8 @@ function App() {
             ]}
           />
         </FooterMenu>
-        {customizeSheetMarkup}
-        {designSheetMarkup}
+        {colorSheetMarkup}
+        {eyeSheetMarkup}
         <Overlay
           isOpen={overlayIsOpen}
           transparent={sheetIsOpen}
