@@ -1,0 +1,72 @@
+@import '../../stylesheets/main';
+
+$body-max-height: rem(800);
+
+.DesktopMenu {
+  display: none;
+  width: 100%;
+  // TODO: Use header-height variable
+  height: calc(100% - 4rem);
+  margin: get-spacing('double');
+
+  @include tablet-and-up {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.Body {
+  background-color: get-color('white');
+  padding: get-spacing();
+  border: 1px solid #ddd;
+  border-top: none;
+  border-bottom: none;
+  height: 100%;
+  max-height: $body-max-height;
+  overflow: scroll;
+}
+
+.Footer {
+  background-color: get-color('white');
+  padding: get-spacing();
+  border-radius: 0 0 rem(20) rem(20);
+  border: 1px solid #ddd;
+}
+
+.Tabs {
+  // Required to show box-shadow on tabs.
+  position: relative;
+}
+
+.Tab {
+  @include reset-button;
+  background-color: #f1f1f1;
+  font-size: rem(18);
+  width: 50%;
+  padding: get-spacing();
+  border: 1px solid #ddd;
+  border-bottom: none;
+  box-shadow: 0 1px 0 0 #ddd;
+
+  &:hover,
+  &:focus {
+    background: #c4f7ff;
+  }
+
+  &.active {
+    background-color: get-color('white');
+    box-shadow: none;
+  }
+
+  &:first-child {
+    border-bottom: none;
+    border-right: none;
+    border-radius: rem(20) 0 0 0;
+  }
+
+  &:last-child {
+    border-bottom: none;
+    border-radius: 0 rem(20) 0 0;
+  }
+}

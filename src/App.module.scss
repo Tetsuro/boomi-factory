@@ -3,6 +3,9 @@
 $stripe-background-primary: #ffe7b2;
 $stripe-background-secondary: get-color('pastel-yellow');
 $stripe-background-width: 6px;
+
+$layout-max-width: rem(1300);
+
 // body > div is to select the #root div.
 html,
 body,
@@ -29,14 +32,26 @@ body > div {
 }
 
 .App {
+  height: 100%;
+}
+
+.Body {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  // TODO: Use header-height variable
+  height: calc(100% - #{rem(64)});
   overflow: hidden;
+
+  @include tablet-and-up {
+    flex-direction: row;
+    align-items: center;
+    max-width: $layout-max-width;
+    margin: 0 auto;
+  }
 }
 
 @media print {
-  .App {
+  .Body {
     display: none;
   }
 

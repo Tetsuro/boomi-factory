@@ -27,7 +27,7 @@ $desktop-width: rem(1360);
 }
 
 @mixin tablet-and-up {
-  @media (min-width: #{$tablet-width}) {
+  @media (min-width: #{$tablet-width}) and (orientation: landscape) {
     @content;
   }
 }
