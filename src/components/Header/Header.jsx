@@ -28,10 +28,23 @@ function Header({ show = true, onMobileMenuActivatorClick }) {
       unmountOnExit
     >
       <div>
-        {/* <div className={styles.Logo}>
+        <div className={styles.Logo}>
           <Logo />
-        </div> */}
-        <h1>build-a-boomi</h1>
+          <h1>boomi</h1>
+        </div>
+        <nav className={styles.Links}>
+          <ul>
+            <li>
+              <a>What's a Boomi?</a>
+            </li>
+            <li>
+              <a>How to build</a>
+            </li>
+            <li>
+              <a>Gallery</a>
+            </li>
+          </ul>
+        </nav>
         <button className={styles.MobileMenuActivator} onClick={handleClick}>
           <HamburgerIcon />
           <span>Open menu</span>
