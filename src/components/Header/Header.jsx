@@ -1,11 +1,14 @@
 import React from 'react';
 import { CSSTransition } from 'react-transition-group';
+import { useTranslation } from 'react-i18next';
 import styles from './Header.module.scss';
 import { ReactComponent as HamburgerIcon } from './icons/menu.svg';
 import { ReactComponent as Logo } from './icons/logo.svg';
 import { classNames } from '../../utilities/classNames';
 
 function Header({ show = true, onMobileMenuActivatorClick }) {
+  const { t } = useTranslation();
+
   function handleClick() {
     onMobileMenuActivatorClick();
   }
@@ -28,10 +31,23 @@ function Header({ show = true, onMobileMenuActivatorClick }) {
       unmountOnExit
     >
       <div>
-        {/* <div className={styles.Logo}>
+        <div className={styles.Logo}>
           <Logo />
-        </div> */}
-        <h1>build-a-boomi</h1>
+          <h1>boomi</h1>
+        </div>
+        <nav className={styles.Links}>
+          <ul>
+            <li>
+              <a href='#'>{t('menu.whats_a_boomi')}</a>
+            </li>
+            <li>
+              <a href='#'>{t('menu.how_to_build')}</a>
+            </li>
+            <li>
+              <a href='#'>{t('menu.gallery')}</a>
+            </li>
+          </ul>
+        </nav>
         <button className={styles.MobileMenuActivator} onClick={handleClick}>
           <HamburgerIcon />
           <span>Open menu</span>

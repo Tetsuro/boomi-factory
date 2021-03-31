@@ -6,7 +6,7 @@ import { classNames } from '../../utilities/classNames';
 import styles from './MobileMenu.module.scss';
 
 function MobileMenu({ open = false }) {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const transitionClassNames = {
     enter: classNames(styles.MobileMenu),
@@ -40,7 +40,7 @@ function MobileMenu({ open = false }) {
             <a href="#">{t('menu.donate')}</a>
           </li> */}
         </ul>
-        <ul className={styles.LanguageMenu}>
+        {/* <ul className={styles.LanguageMenu}>
           <li>
             <button onClick={() => i18n.changeLanguage('en')}>
               🇬🇧 English
@@ -54,7 +54,7 @@ function MobileMenu({ open = false }) {
           <li>
             <button onClick={() => i18n.changeLanguage('jp')}>🇯🇵 日本語</button>
           </li>
-        </ul>
+        </ul> */}
       </nav>
     </CSSTransition>
   );
