@@ -63,6 +63,8 @@ $header-color: #fff;
 
 .Logo {
   display: flex;
+  height: $header-height;
+  align-items: center;
 
   svg {
     margin-right: get-spacing('half');
