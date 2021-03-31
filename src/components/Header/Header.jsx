@@ -1,11 +1,14 @@
 import React from 'react';
 import { CSSTransition } from 'react-transition-group';
+import { useTranslation } from 'react-i18next';
 import styles from './Header.module.scss';
 import { ReactComponent as HamburgerIcon } from './icons/menu.svg';
 import { ReactComponent as Logo } from './icons/logo.svg';
 import { classNames } from '../../utilities/classNames';
 
 function Header({ show = true, onMobileMenuActivatorClick }) {
+  const { t } = useTranslation();
+
   function handleClick() {
     onMobileMenuActivatorClick();
   }
@@ -35,13 +38,13 @@ function Header({ show = true, onMobileMenuActivatorClick }) {
         <nav className={styles.Links}>
           <ul>
             <li>
-              <a>What's a Boomi?</a>
+              <a href='#'>{t('menu.whats_a_boomi')}</a>
             </li>
             <li>
-              <a>How to build</a>
+              <a href='#'>{t('menu.how_to_build')}</a>
             </li>
             <li>
-              <a>Gallery</a>
+              <a href='#'>{t('menu.gallery')}</a>
             </li>
           </ul>
         </nav>

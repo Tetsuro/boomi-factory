@@ -6,7 +6,7 @@ import { classNames } from '../../utilities/classNames';
 import styles from './MobileMenu.module.scss';
 
 function MobileMenu({ open = false }) {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const transitionClassNames = {
     enter: classNames(styles.MobileMenu),

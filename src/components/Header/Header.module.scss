@@ -43,7 +43,7 @@ $header-color: #fff;
 
   &:hover,
   &:focus {
-    background-color: #ff3975;
+    background-color: #ff86ab;
   }
 
   span {
@@ -97,7 +97,7 @@ $header-color: #fff;
   }
 
   li {
-    margin-right: get-spacing('double');
+    margin-right: get-spacing();
 
     &:last-child {
       margin-right: 0;
@@ -108,5 +108,18 @@ $header-color: #fff;
     color: $header-color;
     font-weight: bold;
     font-size: rem(24);
+    text-decoration: none;
+    display: inline-block;
+    border-radius: rem(16);
+    padding: get-spacing('half') get-spacing();
+
+    &:hover,
+    &:focus {
+      background-color: #ff86ab;
+    }
+
+    &:active {
+      background-color: #ff91b2;
+    }
   }
 }
