@@ -24,7 +24,7 @@ $body-max-height: rem(800);
   border-bottom: none;
   height: 100%;
   max-height: $body-max-height;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 .Footer {
