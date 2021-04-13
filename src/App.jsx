@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Route, Switch, useLocation } from 'react-router-dom';
 
 import ButtonGroup from './components/ButtonGroup';
 import Header from './components/Header';
@@ -9,6 +10,7 @@ import Sheet from './components/Sheet';
 import ColorsList from './components/ColorsList';
 import DesktopMenu from './components/DesktopMenu';
 import MobileMenu from './components/MobileMenu';
+import Modal from './components/Modal';
 import Overlay from './components/Overlay';
 import BluePrint from './components/BluePrint';
 import { EyesList } from './components/EyesList';
@@ -27,6 +29,9 @@ function App() {
   const [activeTab, setActiveTab] = useState(0);
 
   const { t } = useTranslation();
+
+  // let location = useLocation();
+  // console.log(location);
 
   const handleSheetClose = () => {
     setDesignSheetIsOpen(false);
@@ -97,6 +102,12 @@ function App() {
 
   useKeyPress(27, closeOverlays);
 
+  const modalMarkup = (
+    <Modal title='Whats a Boomi' isOpen>
+      <p>Testing</p>
+    </Modal>
+  );
+
   function print() {
     window.print();
   }
@@ -108,6 +119,12 @@ function App() {
         onMobileMenuActivatorClick={handleMobileMenuActivatorClick}
       />
       <div className={styles.Body}>
+        <Switch>
+          <Route exact path='/about'>
+            {modalMarkup}
+            <Overlay isOpen onClick={closeOverlays} />
+          </Route>
+        </Switch>
         <Preview
           activeColor={activeColor}
           activeEyes={activeEyes}

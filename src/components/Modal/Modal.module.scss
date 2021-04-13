@@ -1,0 +1,79 @@
+@import '../../stylesheets/main';
+
+$close-button-size: rem(40);
+$sheet-border-radius: rem(20);
+$header-height: rem(70);
+$transition-duration: 300ms;
+
+.Modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  opacity: 0;
+  transform: translate(-50%, -30%);
+  transition-duration: $transition-duration;
+  transition-property: transform, opacity;
+  min-width: 80%;
+  max-width: 80%;
+}
+
+.Modal-appear {
+  opacity: 0;
+}
+
+.Modal-enter {
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.Modal-enter-done {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
+.Header {
+  background: get-color('white');
+
+  display: flex;
+  justify-content: space-between;
+  // TODO: Add to helper.css
+  border-bottom: 1px solid #d7d7d7;
+  height: $header-height;
+  padding: 0 get-spacing();
+  align-items: center;
+  z-index: 1;
+  border-radius: rem(20) rem(20) 0 0;
+}
+
+.Body {
+  background: get-color('white');
+  padding: get-spacing();
+  overflow-y: scroll;
+  height: calc(100% - #{$header-height});
+}
+
+.Footer {
+  background: get-color('white');
+  height: rem(20);
+  border-radius: 0 0 rem(20) rem(20);
+}
+
+.CloseButton {
+  @include reset-button;
+  width: $close-button-size;
+  height: $close-button-size;
+  border-radius: get-radius();
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    // TODO: Add to color map
+    background: #e6e6e6;
+  }
+
+  > span {
+    @include visually-hidden;
+  }
+}
