@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './Preview.module.scss';
-import Button from '../Button';
 import { ReactComponent as Boomi } from './svg/boomi.svg';
 import { eyesArray } from '../EyesList';
 import { classNames } from '../../utilities/classNames';

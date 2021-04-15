@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Route, Switch, useLocation, useHistory } from 'react-router-dom';
 
 import ButtonGroup from './components/ButtonGroup';
 import Header from './components/Header';
@@ -14,6 +15,8 @@ import BluePrint from './components/BluePrint';
 import { EyesList } from './components/EyesList';
 import { colors } from './data/colors.json';
 
+import { About, HowToBuild, Gallery } from './pages';
+
 import { useKeyPress } from './hooks/useKeyPress';
 
 import styles from './App.module.scss';
@@ -27,6 +30,11 @@ function App() {
   const [activeTab, setActiveTab] = useState(0);
 
   const { t } = useTranslation();
+
+  let location = useLocation();
+  let history = useHistory();
+
+  const modalIsOpen = location.state && location.state.modalIsOpen;
 
   const handleSheetClose = () => {
     setDesignSheetIsOpen(false);
@@ -85,6 +93,7 @@ function App() {
     setCustomizeSheetIsOpen(false);
     setDesignSheetIsOpen(false);
     setMobileMenuIsOpen(false);
+    history.push('/');
   };
 
   const handleMobileMenuActivatorClick = () => {
@@ -92,7 +101,10 @@ function App() {
   };
 
   const overlayIsOpen =
-    mobileMenuIsOpen || customizeSheetIsOpen || designSheetIsOpen;
+    mobileMenuIsOpen ||
+    customizeSheetIsOpen ||
+    designSheetIsOpen ||
+    modalIsOpen;
   const sheetIsOpen = customizeSheetIsOpen || designSheetIsOpen;
 
   useKeyPress(27, closeOverlays);
@@ -108,6 +120,17 @@ function App() {
         onMobileMenuActivatorClick={handleMobileMenuActivatorClick}
       />
       <div className={styles.Body}>
+        <Switch>
+          <Route exact path='/about'>
+            <About />
+          </Route>
+          <Route exact path='/how-to-build'>
+            <HowToBuild />
+          </Route>
+          <Route exact path='/gallery'>
+            <Gallery />
+          </Route>
+        </Switch>
         <Preview
           activeColor={activeColor}
           activeEyes={activeEyes}
@@ -131,7 +154,10 @@ function App() {
           }}
           onTabClick={handleTabClick}
         />
-        <MobileMenu open={mobileMenuIsOpen} />
+        <MobileMenu
+          open={mobileMenuIsOpen}
+          onAnyLinkClick={handleMobileMenuActivatorClick}
+        />
         <FooterMenu show={!sheetIsOpen} label={t('print')} onClick={print}>
           <ButtonGroup
             buttons={[

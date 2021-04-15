@@ -1,11 +1,12 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { CSSTransition } from 'react-transition-group';
+import { Link } from 'react-router-dom';
 import { classNames } from '../../utilities/classNames';
 
 import styles from './MobileMenu.module.scss';
 
-function MobileMenu({ open = false }) {
+function MobileMenu({ open = false, onAnyLinkClick }) {
   const { t } = useTranslation();
 
   const transitionClassNames = {
@@ -28,13 +29,22 @@ function MobileMenu({ open = false }) {
         </div>
         <ul className={styles.MainMenu}>
           <li>
-            <a href='#'>{t('menu.whats_a_boomi')}</a>
+            <Link
+              to={{ pathname: '/about', state: { modalIsOpen: true } }}
+              onClick={onAnyLinkClick}
+            >
+              {t('menu.whats_a_boomi')}
+            </Link>
           </li>
           <li>
-            <a href='#'>{t('menu.how_to_build')}</a>
+            <Link to={'/how-to-build'} onClick={onAnyLinkClick}>
+              {t('menu.how_to_build')}
+            </Link>
           </li>
           <li>
-            <a href='#'>{t('menu.gallery')}</a>
+            <Link to={'/gallery'} onClick={onAnyLinkClick}>
+              {t('menu.gallery')}
+            </Link>
           </li>
           {/* <li>
             <a href="#">{t('menu.donate')}</a>

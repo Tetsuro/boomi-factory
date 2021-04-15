@@ -8,6 +8,7 @@ $body-max-height: rem(800);
   // TODO: Use header-height variable
   height: calc(100% - 4rem);
   margin: get-spacing('double');
+  margin-left: calc(#{get-spacing('double')} * 2);
 
   @include tablet-and-up {
     display: flex;
