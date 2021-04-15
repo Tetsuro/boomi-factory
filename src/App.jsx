@@ -157,7 +157,10 @@ function App() {
           }}
           onTabClick={handleTabClick}
         />
-        <MobileMenu open={mobileMenuIsOpen} />
+        <MobileMenu
+          open={mobileMenuIsOpen}
+          onAnyLinkClick={handleMobileMenuActivatorClick}
+        />
         <FooterMenu show={!sheetIsOpen} label={t('print')} onClick={print}>
           <ButtonGroup
             buttons={[

@@ -6,7 +6,7 @@ import { classNames } from '../../utilities/classNames';
 
 import styles from './MobileMenu.module.scss';
 
-function MobileMenu({ open = false }) {
+function MobileMenu({ open = false, onAnyLinkClick }) {
   const { t } = useTranslation();
 
   const transitionClassNames = {
@@ -29,7 +29,9 @@ function MobileMenu({ open = false }) {
         </div>
         <ul className={styles.MainMenu}>
           <li>
-            <Link to={'/about'}>{t('menu.whats_a_boomi')}</Link>
+            <Link to={'/about'} onClick={onAnyLinkClick}>
+              {t('menu.whats_a_boomi')}
+            </Link>
           </li>
           <li>
             <Link to={'/how-to-build'}>{t('menu.how_to_build')}</Link>
