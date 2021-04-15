@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Route, Switch, useLocation } from 'react-router-dom';
+import {
+  Route,
+  Redirect,
+  Switch,
+  useLocation,
+  useHistory,
+} from 'react-router-dom';
 
 import ButtonGroup from './components/ButtonGroup';
 import Header from './components/Header';
@@ -27,11 +33,13 @@ function App() {
   const [activeColor, setActiveColor] = useState(colors[0]);
   const [activeEyes, setActiveEyes] = useState('Original');
   const [activeTab, setActiveTab] = useState(0);
+  const [foo, setFoo] = useState(false);
 
   const { t } = useTranslation();
 
-  // let location = useLocation();
-  // console.log(location);
+  let location = useLocation();
+  let history = useHistory();
+  // console.log(location.state);
 
   const handleSheetClose = () => {
     setDesignSheetIsOpen(false);
@@ -90,6 +98,7 @@ function App() {
     setCustomizeSheetIsOpen(false);
     setDesignSheetIsOpen(false);
     setMobileMenuIsOpen(false);
+    history.push('/');
   };
 
   const handleMobileMenuActivatorClick = () => {

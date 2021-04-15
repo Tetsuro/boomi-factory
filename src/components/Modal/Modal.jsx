@@ -32,7 +32,6 @@ function Modal({ isOpen = false, children, title, onClose }) {
           </Link>
         </div>
         <div className={styles.Body}>{children}</div>
-        <div className={styles.Footer} />
       </div>
     </CSSTransition>
   );
