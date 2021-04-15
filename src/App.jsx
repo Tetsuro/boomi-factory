@@ -1,12 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import {
-  Route,
-  Redirect,
-  Switch,
-  useLocation,
-  useHistory,
-} from 'react-router-dom';
+import { Route, Switch, useLocation, useHistory } from 'react-router-dom';
 
 import ButtonGroup from './components/ButtonGroup';
 import Header from './components/Header';
@@ -33,13 +27,13 @@ function App() {
   const [activeColor, setActiveColor] = useState(colors[0]);
   const [activeEyes, setActiveEyes] = useState('Original');
   const [activeTab, setActiveTab] = useState(0);
-  const [foo, setFoo] = useState(false);
 
   const { t } = useTranslation();
 
   let location = useLocation();
   let history = useHistory();
-  // console.log(location.state);
+
+  const modalIsOpen = location.state && location.state.modalIsOpen;
 
   const handleSheetClose = () => {
     setDesignSheetIsOpen(false);
@@ -106,7 +100,10 @@ function App() {
   };
 
   const overlayIsOpen =
-    mobileMenuIsOpen || customizeSheetIsOpen || designSheetIsOpen;
+    mobileMenuIsOpen ||
+    customizeSheetIsOpen ||
+    designSheetIsOpen ||
+    modalIsOpen;
   const sheetIsOpen = customizeSheetIsOpen || designSheetIsOpen;
 
   useKeyPress(27, closeOverlays);
@@ -131,7 +128,6 @@ function App() {
         <Switch>
           <Route exact path='/about'>
             {modalMarkup}
-            <Overlay isOpen onClick={closeOverlays} />
           </Route>
         </Switch>
         <Preview

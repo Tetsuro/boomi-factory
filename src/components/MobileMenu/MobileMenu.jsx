@@ -29,15 +29,22 @@ function MobileMenu({ open = false, onAnyLinkClick }) {
         </div>
         <ul className={styles.MainMenu}>
           <li>
-            <Link to={'/about'} onClick={onAnyLinkClick}>
+            <Link
+              to={{ pathname: '/about', state: { modalIsOpen: true } }}
+              onClick={onAnyLinkClick}
+            >
               {t('menu.whats_a_boomi')}
             </Link>
           </li>
           <li>
-            <Link to={'/how-to-build'}>{t('menu.how_to_build')}</Link>
+            <Link to={'/how-to-build'} onClick={onAnyLinkClick}>
+              {t('menu.how_to_build')}
+            </Link>
           </li>
           <li>
-            <Link to={'/gallery'}>{t('menu.gallery')}</Link>
+            <Link to={'/gallery'} onClick={onAnyLinkClick}>
+              {t('menu.gallery')}
+            </Link>
           </li>
           {/* <li>
             <a href="#">{t('menu.donate')}</a>

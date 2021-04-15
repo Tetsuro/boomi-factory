@@ -41,7 +41,9 @@ function Header({ show = true, onMobileMenuActivatorClick }) {
         <nav className={styles.Links}>
           <ul>
             <li>
-              <Link to={'/about'}>{t('menu.whats_a_boomi')}</Link>
+              <Link to={{ pathname: '/about', state: { modalIsOpen: true } }}>
+                {t('menu.whats_a_boomi')}
+              </Link>
             </li>
             <li>
               <Link to={'/how-to-build'}>{t('menu.how_to_build')}</Link>
