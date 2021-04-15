@@ -46,10 +46,16 @@ function Header({ show = true, onMobileMenuActivatorClick }) {
               </Link>
             </li>
             <li>
-              <Link to={'/how-to-build'}>{t('menu.how_to_build')}</Link>
+              <Link
+                to={{ pathname: '/how-to-build', state: { modalIsOpen: true } }}
+              >
+                {t('menu.how_to_build')}
+              </Link>
             </li>
             <li>
-              <Link to={'/gallery'}>{t('menu.gallery')}</Link>
+              <Link to={{ pathname: '/gallery', state: { modalIsOpen: true } }}>
+                {t('menu.gallery')}
+              </Link>
             </li>
           </ul>
         </nav>

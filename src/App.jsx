@@ -10,11 +10,12 @@ import Sheet from './components/Sheet';
 import ColorsList from './components/ColorsList';
 import DesktopMenu from './components/DesktopMenu';
 import MobileMenu from './components/MobileMenu';
-import Modal from './components/Modal';
 import Overlay from './components/Overlay';
 import BluePrint from './components/BluePrint';
 import { EyesList } from './components/EyesList';
 import { colors } from './data/colors.json';
+
+import { About, HowToBuild, Gallery } from './pages';
 
 import { useKeyPress } from './hooks/useKeyPress';
 
@@ -108,12 +109,6 @@ function App() {
 
   useKeyPress(27, closeOverlays);
 
-  const modalMarkup = (
-    <Modal title='Whats a Boomi' isOpen>
-      <p>Testing</p>
-    </Modal>
-  );
-
   function print() {
     window.print();
   }
@@ -127,7 +122,13 @@ function App() {
       <div className={styles.Body}>
         <Switch>
           <Route exact path='/about'>
-            {modalMarkup}
+            <About />
+          </Route>
+          <Route exact path='/how-to-build'>
+            <HowToBuild />
+          </Route>
+          <Route exact path='/gallery'>
+            <Gallery />
           </Route>
         </Switch>
         <Preview
