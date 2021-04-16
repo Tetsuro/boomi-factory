@@ -37,13 +37,11 @@ function MobileMenu({ open = false, onAnyLinkClick }) {
             </Link>
           </li>
           <li>
-            <Link to={'/how-to-build'} onClick={onAnyLinkClick}>
+            <Link
+              to={{ pathname: '/how-to-build', state: { modalIsOpen: true } }}
+              onClick={onAnyLinkClick}
+            >
               {t('menu.how_to_build')}
-            </Link>
-          </li>
-          <li>
-            <Link to={'/gallery'} onClick={onAnyLinkClick}>
-              {t('menu.gallery')}
             </Link>
           </li>
           {/* <li>

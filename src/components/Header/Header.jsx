@@ -52,11 +52,6 @@ function Header({ show = true, onMobileMenuActivatorClick }) {
                 {t('menu.how_to_build')}
               </Link>
             </li>
-            <li>
-              <Link to={{ pathname: '/gallery', state: { modalIsOpen: true } }}>
-                {t('menu.gallery')}
-              </Link>
-            </li>
           </ul>
         </nav>
         <button className={styles.MobileMenuActivator} onClick={handleClick}>
