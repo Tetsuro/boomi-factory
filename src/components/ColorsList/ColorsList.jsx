@@ -3,7 +3,7 @@ import styles from './ColorsList.module.scss';
 import { colors } from '../../data/colors.json';
 import OptionsGrid from '../OptionsGrid';
 
-function ColorsList({ activeColor, onSwatchClick }) {
+export function ColorsList({ activeColor, onSwatchClick }) {
   function handleClick(color) {
     onSwatchClick(color);
   }
@@ -35,5 +35,3 @@ function ColorsList({ activeColor, onSwatchClick }) {
 
   return <OptionsGrid options={options} />;
 }
-
-export default ColorsList;

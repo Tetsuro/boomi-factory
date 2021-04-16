@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Overlay.module.scss';
 import { classNames } from '../../utilities/classNames';
 
-function Overlay({ isOpen = false, transparent, onClick }) {
+export function Overlay({ isOpen = false, transparent, onClick }) {
   const overlayClassNames = classNames(
     styles.Overlay,
     transparent && styles.transparent
@@ -16,5 +16,3 @@ function Overlay({ isOpen = false, transparent, onClick }) {
     ></div>
   ) : null;
 }
-
-export default Overlay;

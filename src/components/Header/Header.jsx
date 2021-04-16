@@ -9,7 +9,7 @@ import { ReactComponent as Logo } from './icons/logo.svg';
 
 import { classNames } from '../../utilities/classNames';
 
-function Header({ show = true, onMobileMenuActivatorClick }) {
+export function Header({ show = true, onMobileMenuActivatorClick }) {
   const { t } = useTranslation();
 
   function handleClick() {
@@ -62,5 +62,3 @@ function Header({ show = true, onMobileMenuActivatorClick }) {
     </CSSTransition>
   );
 }
-
-export default Header;

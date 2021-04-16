@@ -1,3 +1,1 @@
-import BluePrint from './BluePrint';
-
-export default BluePrint;
+export * from './BluePrint';

@@ -5,7 +5,7 @@ import { classNames } from '../../utilities/classNames';
 
 import { ReactComponent as CloseIcon } from '../../icons/close.svg';
 
-function Sheet({ isOpen = false, children, title, onClose }) {
+export function Sheet({ isOpen = false, children, title, onClose }) {
   const transitionClassNames = {
     enter: classNames(styles.Sheet, styles['Sheet-enter']),
     enterActive: classNames(styles.Sheet, styles['Sheet-enter-active']),
@@ -34,5 +34,3 @@ function Sheet({ isOpen = false, children, title, onClose }) {
     </CSSTransition>
   );
 }
-
-export default Sheet;

@@ -4,7 +4,7 @@ import { ReactComponent as Boomi } from './svg/boomi.svg';
 import { eyesArray } from '../EyesList';
 import { classNames } from '../../utilities/classNames';
 
-function Preview({ activeColor, activeEyes, minimized }) {
+export function Preview({ activeColor, activeEyes, minimized }) {
   const { primary, secondary } = activeColor;
 
   const SelectedEyesSVG = eyesArray.find((eye) => eye.name === activeEyes).svg;
@@ -68,5 +68,3 @@ function Preview({ activeColor, activeEyes, minimized }) {
     </div>
   );
 }
-
-export default Preview;

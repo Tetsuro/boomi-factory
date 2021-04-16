@@ -1,3 +1,1 @@
-import DesktopMenu from './DesktopMenu';
-
-export default DesktopMenu;
+export * from './DesktopMenu';

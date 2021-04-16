@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Button.module.scss';
 import { classNames } from '../../utilities/classNames';
 
-function Button({ primary, children, onClick }) {
+export function Button({ primary, children, onClick }) {
   const buttonClasses = classNames(styles.Button, primary && styles.primary);
 
   return (
@@ -11,5 +11,3 @@ function Button({ primary, children, onClick }) {
     </button>
   );
 }
-
-export default Button;

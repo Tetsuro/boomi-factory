@@ -6,7 +6,7 @@ import { classNames } from '../../utilities/classNames';
 
 import styles from './MobileMenu.module.scss';
 
-function MobileMenu({ open = false, onAnyLinkClick }) {
+export function MobileMenu({ open = false, onAnyLinkClick }) {
   const { t } = useTranslation();
 
   const transitionClassNames = {
@@ -67,5 +67,3 @@ function MobileMenu({ open = false, onAnyLinkClick }) {
     </CSSTransition>
   );
 }
-
-export default MobileMenu;
