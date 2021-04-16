@@ -15,7 +15,7 @@ import {
   Sheet,
 } from './components';
 
-import { About, HowToBuild, Gallery } from './pages';
+import { About, HowToBuild, Gallery, PaletteTest } from './pages';
 
 import { EyesList } from './components/EyesList';
 import { colors } from './data/colors.json';
@@ -183,7 +183,12 @@ function App() {
           onClick={closeOverlays}
         />
       </div>
-      <BluePrint activeColor={activeColor} activeEyes={activeEyes} />
+      <Switch>
+        <Route exact path='/palette-test'>
+          <PaletteTest />
+        </Route>
+        <BluePrint activeColor={activeColor} activeEyes={activeEyes} />
+      </Switch>
     </div>
   );
 }
