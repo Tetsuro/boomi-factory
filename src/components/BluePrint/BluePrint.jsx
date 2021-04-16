@@ -3,7 +3,7 @@ import styles from './BluePrint.module.scss';
 import { ReactComponent as BluePrintSVG } from './svg/blueprint.svg';
 import { eyesArray } from '../EyesList';
 
-function BluePrint({ activeColor, activeEyes }) {
+export function BluePrint({ activeColor, activeEyes }) {
   const { primary, secondary } = activeColor;
 
   const SelectedEyesSVG = eyesArray.find((eye) => eye.name === activeEyes)
@@ -154,5 +154,3 @@ function BluePrint({ activeColor, activeEyes }) {
     </div>
   );
 }
-
-export default BluePrint;

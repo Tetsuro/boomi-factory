@@ -2,20 +2,23 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Route, Switch, useLocation, useHistory } from 'react-router-dom';
 
-import ButtonGroup from './components/ButtonGroup';
-import Header from './components/Header';
-import Preview from './components/Preview';
-import FooterMenu from './components/FooterMenu';
-import Sheet from './components/Sheet';
-import ColorsList from './components/ColorsList';
-import DesktopMenu from './components/DesktopMenu';
-import MobileMenu from './components/MobileMenu';
-import Overlay from './components/Overlay';
-import BluePrint from './components/BluePrint';
-import { EyesList } from './components/EyesList';
-import { colors } from './data/colors.json';
+import {
+  BluePrint,
+  ButtonGroup,
+  ColorsList,
+  DesktopMenu,
+  FooterMenu,
+  Header,
+  MobileMenu,
+  Overlay,
+  Preview,
+  Sheet,
+} from './components';
 
 import { About, HowToBuild, Gallery } from './pages';
+
+import { EyesList } from './components/EyesList';
+import { colors } from './data/colors.json';
 
 import { useKeyPress } from './hooks/useKeyPress';
 

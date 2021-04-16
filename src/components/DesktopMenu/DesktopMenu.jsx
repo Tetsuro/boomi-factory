@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './DesktopMenu.module.scss';
 import { classNames } from '../../utilities/classNames';
-import Button from '../Button';
+import { Button } from '../../components';
 
-function DesktopMenu({ tabs, activeTab, footerAction, onTabClick }) {
+export function DesktopMenu({ tabs, activeTab, footerAction, onTabClick }) {
   const tabsMarkup = tabs.map((tab, index) => {
     const tabClasses = classNames(
       styles.Tab,
@@ -29,5 +29,3 @@ function DesktopMenu({ tabs, activeTab, footerAction, onTabClick }) {
     </div>
   );
 }
-
-export default DesktopMenu;

@@ -1,10 +1,10 @@
 import React from 'react';
 
-import Button from '../Button';
+import { Button } from '../../components';
 import styles from './FooterMenu.module.scss';
 import { classNames } from '../../utilities/classNames';
 
-function FooterMenu({ children, label, show, onClick }) {
+export function FooterMenu({ children, label, show, onClick }) {
   // Making opacity 0 instead of not rendering
   // in order to prevent janky animation when opening/closing sheet.
   const footerMenuClassNames = classNames(
@@ -21,5 +21,3 @@ function FooterMenu({ children, label, show, onClick }) {
     </nav>
   );
 }
-
-export default FooterMenu;

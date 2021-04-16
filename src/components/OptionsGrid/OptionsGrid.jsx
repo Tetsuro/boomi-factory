@@ -1,9 +1,8 @@
 import React from 'react';
-
 import styles from './OptionsGrid.module.scss';
 import { classNames } from '../../utilities/classNames';
 
-function OptionsGrid({ options }) {
+export function OptionsGrid({ options }) {
   const optionsMarkup = options.map((option, index) => {
     const buttonClassNames = classNames(
       styles.Button,
@@ -24,5 +23,3 @@ function OptionsGrid({ options }) {
   });
   return <ul className={styles.OptionsGrid}>{optionsMarkup}</ul>;
 }
-
-export default OptionsGrid;

@@ -1,3 +1,1 @@
-import Sheet from './Sheet';
-
-export default Sheet;
+export * from './Sheet';

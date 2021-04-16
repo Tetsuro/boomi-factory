@@ -1,3 +1,1 @@
-import OptionsGrid from './OptionsGrid';
-
-export default OptionsGrid;
+export * from './OptionsGrid';
