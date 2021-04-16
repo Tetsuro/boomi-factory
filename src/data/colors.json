@@ -11,9 +11,54 @@
       "secondary": "#FF61B8"
     },
     {
-      "name": "Minty Fresh",
+      "name": "Mocha",
+      "primary": "#D7AC9C",
+      "secondary": "#A87668"
+    },
+    {
+      "name": "Cool Mint",
       "primary": "#CCE6C8",
-      "secondary": "#9FD8D4"
+      "secondary": "#CCFFFF"
+    },
+    {
+      "name": "Casper",
+      "primary": "#FFF",
+      "secondary": "#FFF"
+    },
+    {
+      "name": "Pistachio",
+      "primary": "#D8EEBE",
+      "secondary": "#97C872"
+    },
+    {
+      "name": "Slate",
+      "primary": "#ADB5BA",
+      "secondary": "#808D93"
+    },
+    {
+      "name": "Pamplemousse",
+      "primary": "#FF6564",
+      "secondary": "#FEEC8C"
+    },
+    {
+      "name": "Groovy Grape",
+      "primary": "#ACA8F9",
+      "secondary": "#9643C2"
+    },
+    {
+      "name": "Mega Man",
+      "primary": "#07FFFF",
+      "secondary": "#218BF5"
+    },
+    {
+      "name": "Spidey",
+      "primary": "#DD162A",
+      "secondary": "#33398F"
+    },
+    {
+      "name": "Butterchicken",
+      "primary": "#FE8A00",
+      "secondary": "#FFC100"
     }
   ]
 }
