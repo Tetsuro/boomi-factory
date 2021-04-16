@@ -1,6 +1,6 @@
 import React from 'react';
 import { eyesArray } from './eyesMap';
-import OptionsGrid from '../OptionsGrid';
+import { OptionsGrid } from '../../components';
 import styles from './EyesList.module.scss';
 
 export function EyesList({ activeEyes, onEyesClick }) {

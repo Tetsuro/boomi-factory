@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './ColorsList.module.scss';
 import { colors } from '../../data/colors.json';
-import OptionsGrid from '../OptionsGrid';
+import { OptionsGrid } from '../../components';
 
 export function ColorsList({ activeColor, onSwatchClick }) {
   function handleClick(color) {

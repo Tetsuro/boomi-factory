@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 import { ReactComponent as CloseIcon } from '../../icons/close.svg';
 
-function Modal({ isOpen = false, children, title, onClose }) {
+export function Modal({ isOpen = false, children, title, onClose }) {
   const transitionClassNames = {
     appear: classNames(styles.Modal, styles['Modal-appear']),
     enter: classNames(styles.Modal, styles['Modal-enter']),
@@ -36,5 +36,3 @@ function Modal({ isOpen = false, children, title, onClose }) {
     </CSSTransition>
   );
 }
-
-export default Modal;

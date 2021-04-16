@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import Modal from '../../components/Modal';
+import { Modal } from '../../components';
 
 export function HowToBuild() {
   const { t } = useTranslation();
