@@ -1,0 +1,20 @@
+@media print {
+  .PaletteTest {
+    padding: 0.5in;
+    width: 8.5in;
+    height: 11in;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-column-gap: 1in;
+  }
+
+  .Palette {
+    display: flex;
+    height: 1in;
+  }
+
+  .Swatch {
+    width: 100%;
+    display: inline-block;
+  }
+}
