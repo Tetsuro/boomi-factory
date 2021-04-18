@@ -17,7 +17,7 @@ export function Sheet({ isOpen = false, children, title, onClose }) {
   return (
     <CSSTransition
       in={isOpen}
-      timeout={{ enter: 0, exit: 200 }}
+      timeout={{ enter: 0, exit: 150 }}
       classNames={transitionClassNames}
       unmountOnExit
     >
