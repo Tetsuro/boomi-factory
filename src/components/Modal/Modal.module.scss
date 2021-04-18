@@ -15,7 +15,7 @@ $transition-duration: 150ms;
   width: 100%;
   bottom: 0;
   background: get-color('white');
-  border-radius: rem(20);
+  border-radius: rem(20) rem(20) 0 0;
   transform: translateY(60%);
   overflow: hidden;
 
@@ -25,6 +25,7 @@ $transition-duration: 150ms;
     left: 50%;
     transform: translate(-50%, 60%);
     max-width: rem(800);
+    border-radius: rem(20);
   }
 }
 
