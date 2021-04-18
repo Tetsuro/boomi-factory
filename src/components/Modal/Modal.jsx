@@ -20,7 +20,7 @@ export function Modal({ isOpen = false, children, title, onClose }) {
     <CSSTransition
       in
       appear
-      timeout={{ enter: 0, exit: 0 }}
+      timeout={{ enter: 0, exit: 400 }}
       classNames={transitionClassNames}
     >
       <div>
