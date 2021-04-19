@@ -23,31 +23,31 @@ export function MobileMenu({ open = false, onAnyLinkClick }) {
       classNames={transitionClassNames}
       unmountOnExit
     >
-      <nav>
+      <div>
         <div className={styles.Heading}>
           <h2>{t('menu.menu')}</h2>
         </div>
-        <ul className={styles.MainMenu}>
-          <li>
-            <Link
-              to={{ pathname: '/about', state: { modalIsOpen: true } }}
-              onClick={onAnyLinkClick}
-            >
-              {t('menu.whats_a_boomi')}
-            </Link>
-          </li>
-          <li>
-            <Link
-              to={{ pathname: '/how-to-build', state: { modalIsOpen: true } }}
-              onClick={onAnyLinkClick}
-            >
-              {t('menu.how_to_build')}
-            </Link>
-          </li>
-          {/* <li>
-            <a href="#">{t('menu.donate')}</a>
-          </li> */}
-        </ul>
+        <nav className={styles.MainMenu}>
+          <ul>
+            <li>
+              <Link
+                to={{ pathname: '/about', state: { modalIsOpen: true } }}
+                onClick={onAnyLinkClick}
+              >
+                {t('menu.whats_a_boomi')}
+              </Link>
+            </li>
+            <li>
+              <Link
+                to={{ pathname: '/how-to-build', state: { modalIsOpen: true } }}
+                onClick={onAnyLinkClick}
+              >
+                {t('menu.how_to_build')}
+              </Link>
+            </li>
+          </ul>
+        </nav>
+
         {/* <ul className={styles.LanguageMenu}>
           <li>
             <button onClick={() => i18n.changeLanguage('en')}>
@@ -63,7 +63,30 @@ export function MobileMenu({ open = false, onAnyLinkClick }) {
             <button onClick={() => i18n.changeLanguage('jp')}>🇯🇵 日本語</button>
           </li>
         </ul> */}
-      </nav>
+        <footer>
+          Made with{' '}
+          <span role='img' aria-label='heart'>
+            ❤️
+          </span>{' '}
+          by{' '}
+          <a
+            href='https://www.tetchi.ca'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            tetchi
+          </a>
+          . Follow me on{' '}
+          <a
+            href='https://www.twitter.com/t3tchi'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            Twitter
+          </a>
+          .
+        </footer>
+      </div>
     </CSSTransition>
   );
 }
