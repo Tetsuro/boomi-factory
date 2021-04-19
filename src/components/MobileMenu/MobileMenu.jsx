@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
+import { useTranslation, Trans } from 'react-i18next';
 import { CSSTransition } from 'react-transition-group';
 import { Link } from 'react-router-dom';
 import { classNames } from '../../utilities/classNames';
@@ -7,7 +7,7 @@ import { classNames } from '../../utilities/classNames';
 import styles from './MobileMenu.module.scss';
 
 export function MobileMenu({ open = false, onAnyLinkClick }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const transitionClassNames = {
     enter: classNames(styles.MobileMenu),
@@ -64,27 +64,20 @@ export function MobileMenu({ open = false, onAnyLinkClick }) {
           </li>
         </ul> */}
         <footer>
-          Made with{' '}
-          <span role='img' aria-label='heart'>
-            ❤️
-          </span>{' '}
-          by{' '}
-          <a
-            href='https://www.tetchi.ca'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            tetchi
-          </a>
-          . Follow me on{' '}
-          <a
-            href='https://www.twitter.com/t3tchi'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            Twitter
-          </a>
-          .
+          <Trans i18nKey='footer.text'>
+            {/* eslint-disable jsx-a11y/anchor-has-content */}
+            {/* ...since content is filled in by i18n */}
+            <a
+              href='https://www.tetchi.ca'
+              target='_blank'
+              rel='noopener noreferrer'
+            ></a>
+            <a
+              href='https://www.twitter.com/t3tchi'
+              target='_blank'
+              rel='noopener noreferrer'
+            ></a>
+          </Trans>
         </footer>
       </div>
     </CSSTransition>
