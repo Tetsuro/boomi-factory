@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation, Trans } from 'react-i18next';
 import { Route, Switch, useLocation, useHistory } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 import {
   BluePrint,
@@ -15,7 +16,7 @@ import {
   Sheet,
 } from './components';
 
-import { About, HowToBuild, Gallery, PaletteTest } from './pages';
+import { About, HowToBuild, PaletteTest } from './pages';
 
 import { EyesList } from './components/EyesList';
 import { colors } from './data/colors.json';
@@ -118,6 +119,10 @@ function App() {
 
   return (
     <div className={styles.App}>
+      <Helmet>
+        <title>{t('homepage.title')}</title>
+        <meta name='description' content={t('homepage.description')} />
+      </Helmet>
       <Header
         show={!sheetIsOpen}
         onMobileMenuActivatorClick={handleMobileMenuActivatorClick}
@@ -129,9 +134,6 @@ function App() {
           </Route>
           <Route exact path='/how-to-build'>
             <HowToBuild />
-          </Route>
-          <Route exact path='/gallery'>
-            <Gallery />
           </Route>
         </Switch>
         <Preview
