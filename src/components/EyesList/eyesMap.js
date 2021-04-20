@@ -22,6 +22,10 @@ import { ReactComponent as Dead } from './svg/dead.svg';
 import { ReactComponent as DeadPreview } from './svg/dead-preview.svg';
 import { ReactComponent as DeadBlueprint } from './svg/dead-blueprint.svg';
 
+import { ReactComponent as Rage } from './svg/rage.svg';
+import { ReactComponent as RagePreview } from './svg/rage-preview.svg';
+import { ReactComponent as RageBlueprint } from './svg/rage-blueprint.svg';
+
 export const eyesMap = {
   original: Original,
   blink: Blink,
@@ -64,5 +68,11 @@ export const eyesArray = [
     svg: OldTimey,
     previewSvg: OldTimeyPreview,
     blueprintSvg: OldTimeyBlueprint,
+  },
+  {
+    name: 'Rage',
+    svg: Rage,
+    previewSvg: RagePreview,
+    blueprintSvg: RageBlueprint,
   },
 ];
