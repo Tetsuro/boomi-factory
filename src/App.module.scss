@@ -50,6 +50,19 @@ body > div {
   }
 }
 
+.Footer {
+  display: none;
+
+  @include tablet-and-up {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: #5f5f5f;
+  }
+}
+
 @media print {
   .Body {
     display: none;
