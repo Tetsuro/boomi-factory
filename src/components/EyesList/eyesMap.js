@@ -10,6 +10,14 @@ import { ReactComponent as Meh } from './svg/meh.svg';
 import { ReactComponent as MehPreview } from './svg/meh-preview.svg';
 import { ReactComponent as MehBlueprint } from './svg/meh-blueprint.svg';
 
+import { ReactComponent as OldTimey } from './svg/old-timey.svg';
+import { ReactComponent as OldTimeyPreview } from './svg/old-timey-preview.svg';
+import { ReactComponent as OldTimeyBlueprint } from './svg/old-timey-blueprint.svg';
+
+import { ReactComponent as Hearts } from './svg/hearts.svg';
+import { ReactComponent as HeartsPreview } from './svg/hearts-preview.svg';
+import { ReactComponent as HeartsBlueprint } from './svg/hearts-blueprint.svg';
+
 export const eyesMap = {
   original: Original,
   blink: Blink,
@@ -34,5 +42,17 @@ export const eyesArray = [
     svg: Meh,
     previewSvg: MehPreview,
     blueprintSvg: MehBlueprint,
+  },
+  {
+    name: 'Old Timey',
+    svg: OldTimey,
+    previewSvg: OldTimeyPreview,
+    blueprintSvg: OldTimeyBlueprint,
+  },
+  {
+    name: 'Hearts',
+    svg: Hearts,
+    previewSvg: HeartsPreview,
+    blueprintSvg: HeartsBlueprint,
   },
 ];
