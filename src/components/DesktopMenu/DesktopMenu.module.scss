@@ -5,9 +5,8 @@ $body-max-height: rem(800);
 .DesktopMenu {
   display: none;
   width: 100%;
-  // TODO: Use header-height variable
-  height: calc(100% - 4rem);
-  margin: get-spacing('double');
+  height: calc(100% - 10rem);
+  margin: 0 get-spacing('double');
   margin-left: calc(#{get-spacing('double')} * 2);
 
   @include tablet-and-up {

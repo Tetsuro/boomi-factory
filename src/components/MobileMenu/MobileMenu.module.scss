@@ -30,7 +30,9 @@ $mobile-menu-width: rem(250);
 }
 
 .MainMenu {
-  @include reset-list;
+  ul {
+    @include reset-list;
+  }
   flex-grow: 1;
   // TODO: Add to helper.css
   border-bottom: 1px solid #d7d7d7;
@@ -87,4 +89,9 @@ $mobile-menu-width: rem(250);
       box-shadow: 0 0 0 3px get-color('pastel-blue');
     }
   }
+}
+
+footer {
+  padding: get-spacing('half') get-spacing();
+  line-height: rem(28);
 }
