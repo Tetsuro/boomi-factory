@@ -1,6 +1,6 @@
 {
-  "short_name": "build-a-boomi",
-  "name": "build-a-boomi",
+  "short_name": "boomi",
+  "name": "Boomi",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,9 +8,39 @@
       "type": "image/x-icon"
     },
     {
+      "src": "logo120.png",
+      "type": "image/png",
+      "sizes": "120x120"
+    },
+    {
+      "src": "logo152.png",
+      "type": "image/png",
+      "sizes": "152x152"
+    },
+    {
+      "src": "logo167.png",
+      "type": "image/png",
+      "sizes": "167x167"
+    },
+    {
+      "src": "logo180.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    },
+    {
       "src": "logo192.png",
       "type": "image/png",
       "sizes": "192x192"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo256.png",
+      "type": "image/png",
+      "sizes": "256x256"
     },
     {
       "src": "logo512.png",
