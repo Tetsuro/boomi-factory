@@ -1,15 +1,15 @@
 const en = {
   translation: {
     homepage: {
-      title: 'Boomi | Build your own Boomi papercraft toy!',
+      title: 'Boomi - Build your own Boomi papercraft toy!',
       description:
         'Build your own Boomi papercraft toy! Fun for the whole family!',
     },
     whats_a_boomi: {
-      title: "Boomi | What's a Boomi?",
+      title: "Boomi - What's a Boomi?",
     },
     how_to_build: {
-      title: 'Boomi | How to build?',
+      title: 'Boomi - How to build?',
     },
     menu: {
       menu: 'Menu',
