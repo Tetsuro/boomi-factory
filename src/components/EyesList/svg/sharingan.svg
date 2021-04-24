@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 538.32 725.47">
+  <g id="Right_copy_2" data-name="Right copy 2">
+    <ellipse cx="462.8" cy="425.14" rx="32.74" ry="51.34" style="fill: #fff;stroke: #231f20;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2px"/>
+    <ellipse cx="462.8" cy="425.14" rx="20.12" ry="31.54" style="fill: #ec2c2b;stroke: #231f20;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2px"/>
+    <ellipse cx="462.8" cy="425.14" rx="10.58" ry="16.59" style="stroke: #000;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2px"/>
+    <path d="M501.12,505.05s3.45-6.13-3.53-10.38a4.19,4.19,0,1,0,1.4,5.76h0C501.49,501.38,501.24,502.7,501.12,505.05Z" transform="translate(-13.85 -60.71)" style="fill: #231f20;stroke: #231f20;stroke-linecap: round;stroke-linejoin: round"/>
+    <path d="M450.22,501s4.39,5.5,10.94.63a4.19,4.19,0,1,0-5.86-.87h0C453.49,502.71,452.35,502,450.22,501Z" transform="translate(-13.85 -60.71)" style="fill: #231f20;stroke: #231f20;stroke-linecap: round;stroke-linejoin: round"/>
+    <path d="M479.6,448.91s-7,.24-7,8.41a4.19,4.19,0,1,0,4.19-4.19h0C476.27,450.5,477.53,450,479.6,448.91Z" transform="translate(-13.85 -60.71)" style="fill: #231f20;stroke: #231f20;stroke-linecap: round;stroke-linejoin: round"/>
+  </g>
+  <g id="Left">
+    <ellipse cx="132.89" cy="425.14" rx="32.74" ry="51.34" style="fill: #fff;stroke: #231f20;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2px"/>
+    <ellipse cx="132.89" cy="425.14" rx="20.12" ry="31.54" style="fill: #ec2c2b;stroke: #231f20;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2px"/>
+    <ellipse cx="132.89" cy="425.14" rx="10.58" ry="16.59" style="stroke: #000;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2px"/>
+    <path d="M171.2,505.05s3.45-6.13-3.52-10.38a4.19,4.19,0,1,0,1.4,5.76h0C171.57,501.38,171.32,502.7,171.2,505.05Z" transform="translate(-13.85 -60.71)" style="fill: #231f20;stroke: #231f20;stroke-linecap: round;stroke-linejoin: round"/>
+    <path d="M120.3,501s4.4,5.5,11,.63a4.2,4.2,0,1,0-5.87-.87h0C123.57,502.71,122.44,502,120.3,501Z" transform="translate(-13.85 -60.71)" style="fill: #231f20;stroke: #231f20;stroke-linecap: round;stroke-linejoin: round"/>
+    <path d="M149.68,448.91s-7,.24-7,8.41a4.19,4.19,0,1,0,4.19-4.19h0C146.35,450.5,147.61,450,149.68,448.91Z" transform="translate(-13.85 -60.71)" style="fill: #231f20;stroke: #231f20;stroke-linecap: round;stroke-linejoin: round"/>
+  </g>
+</svg>
