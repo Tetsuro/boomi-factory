@@ -11,21 +11,22 @@ $transition-duration: 150ms;
   opacity: 0;
   transition-duration: $transition-duration;
   transition-property: transform, opacity;
-  height: 80%;
-  width: 100%;
   bottom: 0;
+  width: 100%;
   background: get-color('white');
   border-radius: rem(20) rem(20) 0 0;
   transform: translateY(60%);
   overflow: hidden;
 
   @include tablet-and-up {
-    height: auto;
     top: 50%;
     left: 50%;
+    bottom: auto; // Need this to reset modal height.
     transform: translate(-50%, 60%);
-    max-width: rem(800);
+    max-width: rem(700);
     border-radius: rem(20);
+    height: auto;
+    max-height: 80%;
   }
 }
 
@@ -68,6 +69,12 @@ $transition-duration: 150ms;
   padding: get-spacing();
   overflow-y: scroll;
   height: calc(100% - #{$header-height});
+  font-size: rem(20);
+  line-height: 2rem;
+
+  p {
+    margin: 0 0 rem(30) 0;
+  }
 }
 
 .CloseButton {
