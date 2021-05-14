@@ -22,8 +22,9 @@ export function Modal({ isOpen = false, children, title, onClose }) {
       appear
       timeout={{ enter: 0, exit: 400 }}
       classNames={transitionClassNames}
+      tabIndex='-1'
     >
-      <div>
+      <div role='dialog' aria-labelledby={title}>
         <div className={styles.Header}>
           <h2>{title}</h2>
           <Link to='/' className={styles.CloseButton}>
