@@ -24,9 +24,9 @@ export function About() {
         for my 3D animation class.
       </p>
       <p>
-        I first made Boomi into a papercraft toy in 2009 when I was really
-        inspired by Kidrobot toys. After a long hiatus Boomi finally returns,
-        more customizable than ever!
+        I first made Boomi into a papercraft toy in 2009 when I was really into
+        Kidrobot toys. After a long hiatus Boomi finally returns, more
+        customizable than ever!
       </p>
       <p>I hope you enjoy creating your own Boomi 😊</p>
       <p style={{ textAlign: 'right', marginBottom: '0' }}>
