@@ -11,8 +11,8 @@ $transition-duration: 150ms;
   opacity: 0;
   transition-duration: $transition-duration;
   transition-property: transform, opacity;
-  width: 100%;
   bottom: 0;
+  width: 100%;
   background: get-color('white');
   border-radius: rem(20) rem(20) 0 0;
   transform: translateY(60%);
@@ -21,6 +21,7 @@ $transition-duration: 150ms;
   @include tablet-and-up {
     top: 50%;
     left: 50%;
+    bottom: auto; // Need this to reset modal height.
     transform: translate(-50%, 60%);
     max-width: rem(700);
     border-radius: rem(20);
