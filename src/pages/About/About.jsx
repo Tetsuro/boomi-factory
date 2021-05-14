@@ -12,8 +12,8 @@ export function About() {
         <title>{t('whats_a_boomi.title')}</title>
       </Helmet>
       <p>
-        Boomi is a friendly boombox buddy I created in 2007. Boomi has starred
-        in many of my school projects, including the{' '}
+        Boomi is a friendly boombox buddy I created in 2007. Since its creation,
+        Boomi has starred in many of my school projects including the{' '}
         <a
           href='https://www.youtube.com/watch?v=skoA5jfge7Q'
           target='_blank'
@@ -21,7 +21,7 @@ export function About() {
         >
           final project
         </a>{' '}
-        for 3D animation class.
+        for my 3D animation class.
       </p>
       <p>
         I first made Boomi into a papercraft toy in 2009 when I was really
